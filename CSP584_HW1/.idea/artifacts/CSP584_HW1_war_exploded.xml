@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CSP584_HW1:war exploded">
+    <output-path>$USER_HOME$/Documents/apache-tomcat-7.0.90/webapps/CSP584HW1</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CSP584_HW1" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="CSP584_HW1/web/Web" />
+    </root>
+  </artifact>
+</component>
