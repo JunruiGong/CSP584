@@ -232,7 +232,7 @@ public class Utilities extends HttpServlet {
         String name = String.valueOf(map.get("name"));
         double price = Double.parseDouble(String.valueOf(map.get("price")));
         String image = String.valueOf(map.get("image"));
-        String retailer = String.valueOf(map.get("retailer"));
+        String retailer = String.valueOf(map.get("manufacturer"));
         String condition = String.valueOf(map.get("condition"));
         double discount = Double.parseDouble(String.valueOf(map.get("discount")));
         String catalog = String.valueOf(map.get("productCatalog"));
@@ -336,6 +336,47 @@ public class Utilities extends HttpServlet {
                 accessory.setCondition(condition);
                 accessory.setDiscount(discount);
                 SaxParserDataStore.accessories.put(id, accessory);
+                return true;
+        }
+        return false;
+    }
+
+    public boolean removeProduct(String productId, String catalog) {
+        switch (catalog) {
+            case "Fitness Watch":
+                SaxParserDataStore.fitnessWatchHashMap.remove(productId);
+                return true;
+            case "Smart Watch":
+
+                SaxParserDataStore.smartWatchHashMap.remove(productId);
+                return true;
+            case "Virtual Reality":
+
+                SaxParserDataStore.virtualRealityHashMap.remove(productId);
+                return true;
+            case "Pet Tracker":
+
+                SaxParserDataStore.petTrackerHashMap.remove(productId);
+                return true;
+            case "Headphone":
+
+                SaxParserDataStore.headphoneHashMap.remove(productId);
+                return true;
+            case "Phone":
+
+                SaxParserDataStore.phoneHashMap.remove(productId);
+                return true;
+            case "Laptop":
+
+                SaxParserDataStore.laptopHashMap.remove(productId);
+                return true;
+            case "Voice Assistant":
+
+                SaxParserDataStore.voiceAssistantHashMap.remove(productId);
+                return true;
+            case "Accessory":
+
+                SaxParserDataStore.accessories.remove(productId);
                 return true;
         }
         return false;

@@ -96,7 +96,7 @@ public class ViewOrder extends HttpServlet {
                     for (OrderPayment oi : orderPayments.get(orderId)) {
                         pw.print("<tr>");
                         pw.print("<td><input type='radio' name='orderName' value='" + oi.getOrderName() + "'></td>");
-                        pw.print("<td>" + oi.getOrderId() + ".</td><td>" + oi.getUserName() + "</td><td>" + oi.getOrderName() + "</td><td>Price: " + oi.getOrderPrice() + "</td>");
+                        pw.print("<td>" + oi.getOrderId() + "</td><td>" + oi.getUserName() + "</td><td>" + oi.getOrderName() + "</td><td>Price: " + oi.getOrderPrice() + "</td>");
                         pw.print("<td><input type='submit' name='Order' value='CancelOrder' class='btnbuy'></td>");
                         pw.print("</tr>");
                     }
@@ -156,9 +156,9 @@ public class ViewOrder extends HttpServlet {
                 response.sendRedirect("SalesmanHome");
                 return;
             }
-//            else {
-//                pw.print("<h4 style='color:red'>Please select any product</h4>");
-//            }
+            else {
+                pw.print("<h4 style='color:red'>Please select any product</h4>");
+            }
         }
 
         pw.print("</form></div></div></div>");
