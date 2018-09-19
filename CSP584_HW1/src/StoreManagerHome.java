@@ -4,15 +4,12 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
-import javax.jws.WebService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @WebServlet("/StoreManagerHome")
@@ -20,12 +17,12 @@ public class StoreManagerHome extends HttpServlet {
 
     private String error_msg;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter pw = response.getWriter();
         displayStoreManagerHome(request, response, pw, "");
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
         Utilities utility = new Utilities(request, pw);
@@ -79,9 +76,9 @@ public class StoreManagerHome extends HttpServlet {
 
     }
 
-    protected void displayStoreManagerHome(HttpServletRequest request,
-                                           HttpServletResponse response, PrintWriter pw, String flag)  //error: true代表有错误，false代表没有错误
-            throws ServletException, IOException {
+    private void displayStoreManagerHome(HttpServletRequest request,
+                                         HttpServletResponse response, PrintWriter pw, String flag)  //error: true代表有错误，false代表没有错误
+    {
 
         Utilities utility = new Utilities(request, pw);
         utility.printHtml("Header.html");
@@ -148,15 +145,6 @@ public class StoreManagerHome extends HttpServlet {
 
 
         //显示product的详细信息
-        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
-
-        }
 
         pw.print("<div class='post'>");
         pw.print("<form method='get' action='ViewOrder'>");
@@ -165,49 +153,220 @@ public class StoreManagerHome extends HttpServlet {
         pw.print("<div class='entry'>");
         pw.print("<table class='gridtable'>");
 
-//        pw.print("<tr>");
-//        pw.print("<td><input type='submit' name='Product' value='UpdateProduct' class='btnbuy'></td>");
-//        pw.print("<td><input type='submit' name='Product' value='RemoveProduct' class='btnbuy'></td>");
-//        pw.print("</tr>");
 
+        //按钮显示
         pw.print("<div align='left' style='float:left'>");
-        pw.print("<input type='submit' name='Product' value='UpdateProduct' class='btnbuy'>");
+        pw.print("<input type='submit' name='Product' value='Update Product' class='btnbuy'>");
         pw.print("</div>");
         pw.print("<div align='right'>");
-        pw.print("<input type='submit' name='Product' value='RemoveProduct' class='btnbuy'>");
+        pw.print("<input type='submit' name='Product' value='Remove Product' class='btnbuy'>");
         pw.print("</div>");
-                pw.print("<br>");
+        pw.print("<br>");
 
-//        pw.print("<input type='submit' name='Product' value='UpdateProduct' class='btnbuy'>");
-//        pw.print("<input type='submit' name='Product' value='RemoveProduct' class='btnbuy'>");
 
+        //表头
         pw.print("<tr><td></td>");
-        pw.print("<td>Product ID:</td>");
-        pw.print("<td>Product Name:</td>");
-        pw.print("<td>Price:</td>");
-        pw.print("<td>Manufacturer:</td>");
-        pw.print("<td>Condition:</td>");
-        pw.print("<td>Price:</td>");
-        pw.print("<td>Discount:</td>");
+        pw.print("<td>Product Name</td>");
+        pw.print("<td>Price</td>");
+        pw.print("<td>Manufacturer</td>");
+        pw.print("<td>Condition</td>");
+        pw.print("<td>Discount</td>");
+        pw.print("<td>Catalog</td>");
         pw.print("</tr>");
-        for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
-            for (OrderPayment od : entry.getValue()) {
 
-                pw.print("<tr>");
-                pw.print("<td><input type='radio' name='orderName' value='" + od.getOrderName() + "'></td>");  //修改为商品ID
-                pw.print("<input type='hidden' name='orderName' value='" + od.getOrderName() + "'>");
-                pw.print("<td>" + od.getOrderId() + "</td><td>" + od.getUserName() + "</td><td>" + od.getOrderName() + "</td><td>Price: " + od.getOrderPrice() + "</td>");
-                pw.print("<input type='hidden' name='orderId' value='" + od.getOrderId() + "'>");
-                pw.print("<input type='hidden' name='customerName' value='" + od.getUserName() + "'>");
+        //内容  //fitnessWatch
+        for (Map.Entry<String, FitnessWatch> entry : SaxParserDataStore.fitnessWatchHashMap.entrySet()) {
+            FitnessWatch fitnessWatch = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + fitnessWatch.getId() + "'></td>");  //修改为商品ID
 
-
-                pw.print("</tr>");
-                //pw.print("<br>");
-
-            }
+            pw.print("<td>" + fitnessWatch.getName() + "</td>" +
+                    "<td>" + fitnessWatch.getPrice() + "</td>" +
+                    "<td>" + fitnessWatch.getRetailer() + "</td>" +
+                    "<td>" + fitnessWatch.getCondition() + "</td>" +
+                    "<td>" + fitnessWatch.getDiscount() + "</td>" +
+                    "<td>Fitness Watch</td>");
+            pw.print("<input type='hidden' name='productName' value='" + fitnessWatch.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + fitnessWatch.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + fitnessWatch.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + fitnessWatch.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + fitnessWatch.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Fitness Watch'>");
+            pw.print("</tr>");
         }
+
+        //内容  //smartWatch
+        for (Map.Entry<String, SmartWatch> entry : SaxParserDataStore.smartWatchHashMap.entrySet()) {
+            SmartWatch smartWatch = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + smartWatch.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + smartWatch.getName() + "</td>" +
+                    "<td>" + smartWatch.getPrice() + "</td>" +
+                    "<td>" + smartWatch.getRetailer() + "</td>" +
+                    "<td>" + smartWatch.getCondition() + "</td>" +
+                    "<td>" + smartWatch.getDiscount() + "</td>" +
+                    "<td>Smart Watch</td>");
+            pw.print("<input type='hidden' name='productName' value='" + smartWatch.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + smartWatch.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + smartWatch.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + smartWatch.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + smartWatch.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Smart Watch'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Headphone
+        for (Map.Entry<String, Headphone> entry : SaxParserDataStore.headphoneHashMap.entrySet()) {
+            Headphone headphone = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + headphone.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + headphone.getName() + "</td>" +
+                    "<td>" + headphone.getPrice() + "</td>" +
+                    "<td>" + headphone.getRetailer() + "</td>" +
+                    "<td>" + headphone.getCondition() + "</td>" +
+                    "<td>" + headphone.getDiscount() + "</td>" +
+                    "<td>Headphone</td>");
+            pw.print("<input type='hidden' name='productName' value='" + headphone.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + headphone.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + headphone.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + headphone.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + headphone.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Headphone'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Virtual Reality
+        for (Map.Entry<String, VirtualReality> entry : SaxParserDataStore.virtualRealityHashMap.entrySet()) {
+            VirtualReality virtualReality = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + virtualReality.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + virtualReality.getName() + "</td>" +
+                    "<td>" + virtualReality.getPrice() + "</td>" +
+                    "<td>" + virtualReality.getRetailer() + "</td>" +
+                    "<td>" + virtualReality.getCondition() + "</td>" +
+                    "<td>" + virtualReality.getDiscount() + "</td>" +
+                    "<td>Virtual Reality</td>");
+            pw.print("<input type='hidden' name='productName' value='" + virtualReality.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + virtualReality.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + virtualReality.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + virtualReality.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + virtualReality.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Virtual Reality'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Pet Tracker
+        for (Map.Entry<String, PetTracker> entry : SaxParserDataStore.petTrackerHashMap.entrySet()) {
+            PetTracker petTracker = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + petTracker.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + petTracker.getName() + "</td>" +
+                    "<td>" + petTracker.getPrice() + "</td>" +
+                    "<td>" + petTracker.getRetailer() + "</td>" +
+                    "<td>" + petTracker.getCondition() + "</td>" +
+                    "<td>" + petTracker.getDiscount() + "</td>" +
+                    "<td>Pet Tracker</td>");
+            pw.print("<input type='hidden' name='productName' value='" + petTracker.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + petTracker.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + petTracker.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + petTracker.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + petTracker.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Pet Tracker'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Phone
+        for (Map.Entry<String, Phone> entry : SaxParserDataStore.phoneHashMap.entrySet()) {
+            Phone phone = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + phone.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + phone.getName() + "</td>" +
+                    "<td>" + phone.getPrice() + "</td>" +
+                    "<td>" + phone.getRetailer() + "</td>" +
+                    "<td>" + phone.getCondition() + "</td>" +
+                    "<td>" + phone.getDiscount() + "</td>" +
+                    "<td>Phone</td>");
+            pw.print("<input type='hidden' name='productName' value='" + phone.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + phone.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + phone.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + phone.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + phone.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Phone'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Laptop
+        for (Map.Entry<String, Laptop> entry : SaxParserDataStore.laptopHashMap.entrySet()) {
+            Laptop laptop = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + laptop.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + laptop.getName() + "</td>" +
+                    "<td>" + laptop.getPrice() + "</td>" +
+                    "<td>" + laptop.getRetailer() + "</td>" +
+                    "<td>" + laptop.getCondition() + "</td>" +
+                    "<td>" + laptop.getDiscount() + "</td>" +
+                    "<td>Laptop</td>");
+            pw.print("<input type='hidden' name='productName' value='" + laptop.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + laptop.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + laptop.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + laptop.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + laptop.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Laptop'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Voice Assistant
+        for (Map.Entry<String, VoiceAssistant> entry : SaxParserDataStore.voiceAssistantHashMap.entrySet()) {
+            VoiceAssistant voiceAssistant = entry.getValue();
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + voiceAssistant.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + voiceAssistant.getName() + "</td>" +
+                    "<td>" + voiceAssistant.getPrice() + "</td>" +
+                    "<td>" + voiceAssistant.getRetailer() + "</td>" +
+                    "<td>" + voiceAssistant.getCondition() + "</td>" +
+                    "<td>" + voiceAssistant.getDiscount() + "</td>" +
+                    "<td>Voice Assistant</td>");
+            pw.print("<input type='hidden' name='productName' value='" + voiceAssistant.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + voiceAssistant.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + voiceAssistant.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + voiceAssistant.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + voiceAssistant.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Voice Assistant'>");
+            pw.print("</tr>");
+        }
+
+        //内容  //Accessory
+        for (Map.Entry<String, Accessory> entry : SaxParserDataStore.accessories.entrySet()) {
+            Accessory accessory = entry.getValue();
+            if (accessory.getName() == null || accessory.getName().isEmpty()) {
+                continue;
+            }
+            pw.print("<tr>");
+            pw.print("<td><input type='radio' name='productId' value='" + accessory.getId() + "'></td>");  //修改为商品ID
+
+            pw.print("<td>" + accessory.getName() + "</td>" +
+                    "<td>" + accessory.getPrice() + "</td>" +
+                    "<td>" + accessory.getRetailer() + "</td>" +
+                    "<td>" + accessory.getCondition() + "</td>" +
+                    "<td>" + accessory.getDiscount() + "</td>" +
+                    "<td>Accessory</td>");
+            pw.print("<input type='hidden' name='productName' value='" + accessory.getName() + "'>");
+            pw.print("<input type='hidden' name='price' value='" + accessory.getPrice() + "'>");
+            pw.print("<input type='hidden' name='manufacturer' value='" + accessory.getRetailer() + "'>");
+            pw.print("<input type='hidden' name='condition' value='" + accessory.getCondition() + "'>");
+            pw.print("<input type='hidden' name='discount' value='" + accessory.getDiscount() + "'>");
+            pw.print("<input type='hidden' name='catalog' value='Accessory'>");
+            pw.print("</tr>");
+        }
+
         pw.print("</table>");
         pw.print("</div></form></div></div>");
     }
-
 }
