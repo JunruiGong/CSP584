@@ -93,7 +93,7 @@ public class SalesmanHome extends HttpServlet {
                 error_msg = "Cannot found this customer.";
                 displaySalesmanHome(request, response, pw, "order");
             } else {
-                if (utility.isItemExist(itemCatalog, itemName)) { //已完成测试  //TODO  判断商品是否存在的功能没有完成
+                if (utility.isItemExist(itemCatalog, itemName)) { //已完成测试  // 判断商品是否存在的功能没有完成
                     SimpleDateFormat df = new SimpleDateFormat("HHmmss");//设置日期格式
                     int orderId = Integer.parseInt(df.format(new Date()));  //设置订单号为当前下单时间的时分秒
                     utility.storePayment(orderId, customerName, totalPrice, customerAddress, creditCardNo);

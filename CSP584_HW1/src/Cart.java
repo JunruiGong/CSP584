@@ -78,7 +78,7 @@ public class Cart extends HttpServlet {
             pw.print("<form action='CheckOut' method='post'>");
 
             pw.print("<input type='hidden' name='orderTotal' value='" + total + "'>");
-            pw.print("<tr><th></th><th>Total</th><th>" + total + "</th>");
+            pw.print("<tr><th></th><th>Total: </th><th>" + total + "</th>");
             pw.print("<tr><td></td><td></td><td>");
             pw.print("<input type='submit' name='CheckOut' value='CheckOut' class='btnbuy' /></td>");
             pw.print("</form>");

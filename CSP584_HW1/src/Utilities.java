@@ -19,6 +19,25 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+import java.io.File;
+import java.io.IOException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
 @WebServlet("/Utilities")
 
 /* 
@@ -171,6 +190,171 @@ public class Utilities extends HttpServlet {
                 break;
         }
         return true;
+    }
+
+    public String getRealPath(String catalog) {
+        String realPath = "images";
+        switch (catalog) {
+            case "FitnessWatch":
+                realPath = realPath + "/fitnessWatch";
+                break;
+            case "SmartWatch":
+                realPath = realPath + "/smartWatch";
+                break;
+            case "VirtualReality":
+                realPath = realPath + "/virtualReality";
+                break;
+            case "PetTracker":
+                realPath = realPath + "/petTracker";
+                break;
+            case "Headphone":
+                realPath = realPath + "/headphone";
+                break;
+            case "Phone":
+                realPath = realPath + "/phone";
+                break;
+            case "Laptop":
+                realPath = realPath + "/laptop";
+                break;
+            case "VoiceAssistant":
+                realPath = realPath + "/voiceAssistant";
+                break;
+            case "Accessory":
+                realPath = realPath + "/accessory";
+                break;
+        }
+
+        return realPath;
+    }
+
+    public boolean storeNewProduct(Map<String, Object> map) {
+        String id = String.valueOf(map.get("id"));
+        String name = String.valueOf(map.get("name"));
+        double price = Double.parseDouble(String.valueOf(map.get("price")));
+        String image = String.valueOf(map.get("image"));
+        String retailer = String.valueOf(map.get("retailer"));
+        String condition = String.valueOf(map.get("condition"));
+        double discount = Double.parseDouble(String.valueOf(map.get("discount")));
+        String catalog = String.valueOf(map.get("productCatalog"));
+
+        switch (catalog) {
+            case "FitnessWatch":
+                FitnessWatch fitnessWatch = new FitnessWatch();
+                fitnessWatch.setId(id);
+                fitnessWatch.setName(name);
+                fitnessWatch.setPrice(price);
+                fitnessWatch.setImage(image);
+                fitnessWatch.setRetailer(retailer);
+                fitnessWatch.setCondition(condition);
+                fitnessWatch.setDiscount(discount);
+                SaxParserDataStore.fitnessWatchHashMap.put(id, fitnessWatch);
+                return true;
+            case "SmartWatch":
+                SmartWatch smartWatch = new SmartWatch();
+                smartWatch.setId(id);
+                smartWatch.setName(name);
+                smartWatch.setPrice(price);
+                smartWatch.setImage(image);
+                smartWatch.setRetailer(retailer);
+                smartWatch.setCondition(condition);
+                smartWatch.setDiscount(discount);
+                SaxParserDataStore.smartWatchHashMap.put(id, smartWatch);
+                return true;
+            case "VirtualReality":
+                VirtualReality virtualReality = new VirtualReality();
+                virtualReality.setId(id);
+                virtualReality.setName(name);
+                virtualReality.setPrice(price);
+                virtualReality.setImage(image);
+                virtualReality.setRetailer(retailer);
+                virtualReality.setCondition(condition);
+                virtualReality.setDiscount(discount);
+                SaxParserDataStore.virtualRealityHashMap.put(id, virtualReality);
+                return true;
+            case "PetTracker":
+                PetTracker petTracker = new PetTracker();
+                petTracker.setId(id);
+                petTracker.setName(name);
+                petTracker.setPrice(price);
+                petTracker.setImage(image);
+                petTracker.setRetailer(retailer);
+                petTracker.setCondition(condition);
+                petTracker.setDiscount(discount);
+                SaxParserDataStore.petTrackerHashMap.put(id, petTracker);
+                return true;
+            case "Headphone":
+                Headphone headphone = new Headphone();
+                headphone.setId(id);
+                headphone.setName(name);
+                headphone.setPrice(price);
+                headphone.setImage(image);
+                headphone.setRetailer(retailer);
+                headphone.setCondition(condition);
+                headphone.setDiscount(discount);
+                SaxParserDataStore.headphoneHashMap.put(id, headphone);
+                return true;
+            case "Phone":
+                Phone phone = new Phone();
+                phone.setId(id);
+                phone.setName(name);
+                phone.setPrice(price);
+                phone.setImage(image);
+                phone.setRetailer(retailer);
+                phone.setCondition(condition);
+                phone.setDiscount(discount);
+                SaxParserDataStore.phoneHashMap.put(id, phone);
+                return true;
+            case "Laptop":
+                Laptop laptop = new Laptop();
+                laptop.setId(id);
+                laptop.setName(name);
+                laptop.setPrice(price);
+                laptop.setImage(image);
+                laptop.setRetailer(retailer);
+                laptop.setCondition(condition);
+                laptop.setDiscount(discount);
+                SaxParserDataStore.laptopHashMap.put(id, laptop);
+                return true;
+            case "VoiceAssistant":
+                VoiceAssistant voiceAssistant = new VoiceAssistant();
+                voiceAssistant.setId(id);
+                voiceAssistant.setName(name);
+                voiceAssistant.setPrice(price);
+                voiceAssistant.setImage(image);
+                voiceAssistant.setRetailer(retailer);
+                voiceAssistant.setCondition(condition);
+                voiceAssistant.setDiscount(discount);
+                SaxParserDataStore.voiceAssistantHashMap.put(id, voiceAssistant);
+                return true;
+            case "Accessory":
+                Accessory accessory = new Accessory();
+                accessory.setId(id);
+                accessory.setName(name);
+                accessory.setPrice(price);
+                accessory.setImage(image);
+                accessory.setRetailer(retailer);
+                accessory.setCondition(condition);
+                accessory.setDiscount(discount);
+                SaxParserDataStore.accessories.put(id, accessory);
+                return true;
+        }
+        return false;
+    }
+
+
+    public void readXML() {
+
+        String filepath = "/Users/junruigong/Desktop/ProductCatalog.xml";
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = null;
+        try {
+            docBuilder = docFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(filepath);
+
+
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean isContainsStr(String string) {
