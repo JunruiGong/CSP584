@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-//Remove product by manager
+//This servlet is only for removing product (function) and update product (html), not include function of updating product.
 @WebServlet("/RemoveUpdateProduct")
 public class RemoveUpdateProduct extends HttpServlet {
 
@@ -18,24 +18,23 @@ public class RemoveUpdateProduct extends HttpServlet {
 
         Utilities utility = new Utilities(request, pw);
 
+        String productId = request.getParameter("productId");
+        String name = request.getParameter("productName");
+        String price = request.getParameter("price");
+        String manufacturer = request.getParameter("manufacturer");
+        String condition = request.getParameter("condition");
+        String discount = request.getParameter("discount");
+        String catalog = request.getParameter("catalog");
+        String image = request.getParameter("image");
+
         if (request.getParameter("Product") != null && request.getParameter("Product").equals("Remove")) {
             //Remove Product
-            String productId = request.getParameter("productId");
-            String catalog = request.getParameter("catalog");
             if (utility.removeProduct(productId, catalog)) {
                 response.sendRedirect("StoreManagerHome");
             }
 
         } else if (request.getParameter("Product") != null && request.getParameter("Product").equals("Update")) {
             //Update Product
-            String productId = request.getParameter("productId");
-            String name = request.getParameter("productName");
-            String price = request.getParameter("price");
-            String manufacturer = request.getParameter("manufacturer");
-            String condition = request.getParameter("condition");
-            String discount = request.getParameter("discount");
-            String catalog = request.getParameter("catalog");
-
 
             utility.printHtml("Header.html");
             utility.printHtml("LeftNavigationBar.html");
@@ -49,16 +48,19 @@ public class RemoveUpdateProduct extends HttpServlet {
 
 
             //显示更新product的表格
-            pw.print("<form action='StoreManagerHome' method='post'");
+            pw.print("<form action='UpdateProduct' method='post'");
             pw.print("<table style='width:100%'><tr><td>");
 
-            pw.print("<h4>Product ID</h4></td><td><input type='text' name='id' value='" + productId + "' class='input' required></input>");
+            pw.print("<h4>Product ID: " + productId + "</h4></td>");
+            pw.print("</tr><tr><td>");
+            pw.print("<input type='hidden' name='productId' value='" + productId + "'>");
+            pw.print("<input type='hidden' name='catalog' value='" + catalog + "'>");
+            pw.print("<input type='hidden' name='image' value='" + image + "'>");
+
+            pw.print("<h4>Product Name</h4></td><td><input type='text' name='productName' value='" + name + "' class='input' required></input>");
             pw.print("</td></tr><tr><td>");
 
-            pw.print("<h4>Product Name</h4></td><td><input type='text' name='name' value='" + name + "' class='input' required></input>");
-            pw.print("</td></tr><tr><td>");
-
-            pw.print("<h4>Product Catalog</h4><td><select name='productCatalog' class='input'>" +
+            pw.print("<h4>Product Catalog</h4><td><select id='catalog' name='productCatalog' class='input'>" +
                     "<option value='FitnessWatch' selected>Fitness watch</option>" +
                     "<option value='SmartWatch'>Smart watch</option>" +
                     "<option value='Headphone'>Headphone</option>" +
@@ -85,10 +87,10 @@ public class RemoveUpdateProduct extends HttpServlet {
             pw.print("<h4>Discount</h4></td><td><input type='text' name='discount' value='" + discount + "' class='input' required></input>");
             pw.print("</td></tr><tr><td>");
 
-            pw.print("<input type='submit' class='btnbuy' value='Create' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
+            pw.print("<input type='submit' class='btnbuy' value='Update' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
             pw.print("</td></tr><tr><td></td><td>");
             pw.print("</td></tr></table>");
-            pw.print("</form></div></div>");
+            pw.print("</form></div></div></div>");
         }
     }
 }

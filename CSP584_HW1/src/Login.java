@@ -44,8 +44,8 @@ public class Login extends HttpServlet {
             String user_password = user.getPassword();
             if (password.equals(user_password)) {
                 HttpSession session = request.getSession(true);
-                session.setAttribute("username", user.getName());
-                session.setAttribute("userType", user.getUsertype());
+                session.setAttribute("username", username);
+                session.setAttribute("userType", userType);
                 if (userType.equalsIgnoreCase("Customer")) {
                     response.sendRedirect("Home");
                     return;

@@ -198,6 +198,7 @@ public class StoreManagerHome extends HttpServlet {
             pw.print("<input type='hidden' name='condition' value='" + fitnessWatch.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + fitnessWatch.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Fitness Watch'>");
+            pw.print("<input type='hidden' name='image' value='" + fitnessWatch.getImage() + "'>");
             pw.print("</tr>");
 
             pw.print("<tr>");
@@ -222,12 +223,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + smartWatch.getCondition() + "</td>" +
                     "<td>" + smartWatch.getDiscount() + "</td>" +
                     "<td>Smart Watch</td>");
+            pw.print("<input type='hidden' name='productId' value='" + smartWatch.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + smartWatch.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + smartWatch.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + smartWatch.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + smartWatch.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + smartWatch.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Smart Watch'>");
+            pw.print("<input type='hidden' name='image' value='" + smartWatch.getImage() + "'>");
             pw.print("</tr>");
 
             pw.print("<tr>");
@@ -251,12 +254,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + headphone.getCondition() + "</td>" +
                     "<td>" + headphone.getDiscount() + "</td>" +
                     "<td>Headphone</td>");
+            pw.print("<input type='hidden' name='productId' value='" + headphone.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + headphone.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + headphone.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + headphone.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + headphone.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + headphone.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Headphone'>");
+            pw.print("<input type='hidden' name='image' value='" + headphone.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");
@@ -279,12 +284,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + virtualReality.getCondition() + "</td>" +
                     "<td>" + virtualReality.getDiscount() + "</td>" +
                     "<td>Virtual Reality</td>");
+            pw.print("<input type='hidden' name='productId' value='" + virtualReality.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + virtualReality.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + virtualReality.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + virtualReality.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + virtualReality.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + virtualReality.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Virtual Reality'>");
+            pw.print("<input type='hidden' name='image' value='" + virtualReality.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");
@@ -307,12 +314,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + petTracker.getCondition() + "</td>" +
                     "<td>" + petTracker.getDiscount() + "</td>" +
                     "<td>Pet Tracker</td>");
+            pw.print("<input type='hidden' name='productId' value='" + petTracker.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + petTracker.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + petTracker.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + petTracker.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + petTracker.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + petTracker.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Pet Tracker'>");
+            pw.print("<input type='hidden' name='image' value='" + petTracker.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");
@@ -335,12 +344,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + phone.getCondition() + "</td>" +
                     "<td>" + phone.getDiscount() + "</td>" +
                     "<td>Phone</td>");
+            pw.print("<input type='hidden' name='productId' value='" + phone.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + phone.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + phone.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + phone.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + phone.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + phone.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Phone'>");
+            pw.print("<input type='hidden' name='image' value='" + phone.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");
@@ -363,12 +374,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + laptop.getCondition() + "</td>" +
                     "<td>" + laptop.getDiscount() + "</td>" +
                     "<td>Laptop</td>");
+            pw.print("<input type='hidden' name='productId' value='" + laptop.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + laptop.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + laptop.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + laptop.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + laptop.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + laptop.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Laptop'>");
+            pw.print("<input type='hidden' name='image' value='" + laptop.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");
@@ -391,12 +404,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + voiceAssistant.getCondition() + "</td>" +
                     "<td>" + voiceAssistant.getDiscount() + "</td>" +
                     "<td>Voice Assistant</td>");
+            pw.print("<input type='hidden' name='productId' value='" + voiceAssistant.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + voiceAssistant.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + voiceAssistant.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + voiceAssistant.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + voiceAssistant.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + voiceAssistant.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Voice Assistant'>");
+            pw.print("<input type='hidden' name='image' value='" + voiceAssistant.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");
@@ -422,12 +437,14 @@ public class StoreManagerHome extends HttpServlet {
                     "<td>" + accessory.getCondition() + "</td>" +
                     "<td>" + accessory.getDiscount() + "</td>" +
                     "<td>Accessory</td>");
+            pw.print("<input type='hidden' name='productId' value='" + accessory.getId() + "'>");
             pw.print("<input type='hidden' name='productName' value='" + accessory.getName() + "'>");
             pw.print("<input type='hidden' name='price' value='" + accessory.getPrice() + "'>");
             pw.print("<input type='hidden' name='manufacturer' value='" + accessory.getRetailer() + "'>");
             pw.print("<input type='hidden' name='condition' value='" + accessory.getCondition() + "'>");
             pw.print("<input type='hidden' name='discount' value='" + accessory.getDiscount() + "'>");
             pw.print("<input type='hidden' name='catalog' value='Accessory'>");
+            pw.print("<input type='hidden' name='image' value='" + accessory.getImage() + "'>");
             pw.print("</tr>");
             pw.print("<tr>");
             //pw.print("<td></td>");

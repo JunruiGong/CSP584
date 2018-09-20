@@ -25,17 +25,8 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 @WebServlet("/Utilities")
@@ -84,9 +75,8 @@ public class Utilities extends HttpServlet {
                                 + "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
                         break;
                     case "StoreManager":
-                        result = result + "<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>"
+                        result = result + "<li><a href='StoreManagerHome'><span class='glyphicon'>ViewProduct</span></a></li>"
                                 + "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
-                                + "<li><a href='Account'><span class='glyphicon'>Account</span></a></li>"
                                 + "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
                         break;
                     case "Salesman":
@@ -377,6 +367,129 @@ public class Utilities extends HttpServlet {
             case "Accessory":
 
                 SaxParserDataStore.accessories.remove(productId);
+                return true;
+        }
+        return false;
+    }
+
+    public boolean updateProduct(String id, String name, String price, String manufacturer, String condition, String discount, String image, String catalog) {
+        switch (catalog) {
+            case "Fitness Watch":
+                FitnessWatch fitnessWatch = new FitnessWatch();
+                fitnessWatch.setId(id);
+                fitnessWatch.setName(name);
+                fitnessWatch.setPrice(Double.parseDouble(price));
+                fitnessWatch.setRetailer(manufacturer);
+                fitnessWatch.setCondition(condition);
+                fitnessWatch.setDiscount(Double.parseDouble(discount));
+                fitnessWatch.setImage(image);
+                SaxParserDataStore.fitnessWatchHashMap.remove(id);
+                SaxParserDataStore.fitnessWatchHashMap.put(id, fitnessWatch);
+
+                return true;
+            case "Smart Watch":
+
+                SmartWatch smartWatch = new SmartWatch();
+                smartWatch.setId(id);
+                smartWatch.setName(name);
+                smartWatch.setPrice(Double.parseDouble(price));
+                smartWatch.setRetailer(manufacturer);
+                smartWatch.setCondition(condition);
+                smartWatch.setDiscount(Double.parseDouble(discount));
+                smartWatch.setImage(image);
+                SaxParserDataStore.smartWatchHashMap.remove(id);
+                SaxParserDataStore.smartWatchHashMap.put(id, smartWatch);
+                return true;
+            case "Virtual Reality":
+
+                VirtualReality virtualReality = new VirtualReality();
+                virtualReality.setId(id);
+                virtualReality.setName(name);
+                virtualReality.setPrice(Double.parseDouble(price));
+                virtualReality.setRetailer(manufacturer);
+                virtualReality.setCondition(condition);
+                virtualReality.setDiscount(Double.parseDouble(discount));
+                virtualReality.setImage(image);
+                SaxParserDataStore.virtualRealityHashMap.remove(id);
+                SaxParserDataStore.virtualRealityHashMap.put(id, virtualReality);
+                return true;
+            case "Pet Tracker":
+
+                PetTracker petTracker = new PetTracker();
+                petTracker.setId(id);
+                petTracker.setName(name);
+                petTracker.setPrice(Double.parseDouble(price));
+                petTracker.setRetailer(manufacturer);
+                petTracker.setCondition(condition);
+                petTracker.setDiscount(Double.parseDouble(discount));
+                petTracker.setImage(image);
+                SaxParserDataStore.petTrackerHashMap.remove(id);
+                SaxParserDataStore.petTrackerHashMap.put(id, petTracker);
+                return true;
+            case "Headphone":
+
+                Headphone headphone = new Headphone();
+                headphone.setId(id);
+                headphone.setName(name);
+                headphone.setPrice(Double.parseDouble(price));
+                headphone.setRetailer(manufacturer);
+                headphone.setCondition(condition);
+                headphone.setDiscount(Double.parseDouble(discount));
+                headphone.setImage(image);
+                SaxParserDataStore.headphoneHashMap.remove(id);
+                SaxParserDataStore.headphoneHashMap.put(id, headphone);
+                return true;
+            case "Phone":
+
+                Phone phone = new Phone();
+                phone.setId(id);
+                phone.setName(name);
+                phone.setPrice(Double.parseDouble(price));
+                phone.setRetailer(manufacturer);
+                phone.setCondition(condition);
+                phone.setDiscount(Double.parseDouble(discount));
+                phone.setImage(image);
+                SaxParserDataStore.phoneHashMap.remove(id);
+                SaxParserDataStore.phoneHashMap.put(id, phone);
+                return true;
+            case "Laptop":
+
+                Laptop laptop = new Laptop();
+                laptop.setId(id);
+                laptop.setName(name);
+                laptop.setPrice(Double.parseDouble(price));
+                laptop.setRetailer(manufacturer);
+                laptop.setCondition(condition);
+                laptop.setDiscount(Double.parseDouble(discount));
+                laptop.setImage(image);
+                SaxParserDataStore.laptopHashMap.remove(id);
+                SaxParserDataStore.laptopHashMap.put(id, laptop);
+                return true;
+            case "Voice Assistant":
+
+                VoiceAssistant voiceAssistant = new VoiceAssistant();
+                voiceAssistant.setId(id);
+                voiceAssistant.setName(name);
+                voiceAssistant.setPrice(Double.parseDouble(price));
+                voiceAssistant.setRetailer(manufacturer);
+                voiceAssistant.setCondition(condition);
+                voiceAssistant.setDiscount(Double.parseDouble(discount));
+                voiceAssistant.setImage(image);
+                SaxParserDataStore.voiceAssistantHashMap.remove(id);
+                SaxParserDataStore.voiceAssistantHashMap.put(id, voiceAssistant);
+                return true;
+            case "Accessory":
+
+                Accessory accessory = new Accessory();
+                accessory.setId(id);
+                accessory.setName(name);
+                accessory.setPrice(Double.parseDouble(price));
+                accessory.setRetailer(manufacturer);
+                accessory.setCondition(condition);
+                accessory.setDiscount(Double.parseDouble(discount));
+                accessory.setImage(image);
+                SaxParserDataStore.accessories.remove(id);
+                SaxParserDataStore.accessories.put(id, accessory);
                 return true;
         }
         return false;
