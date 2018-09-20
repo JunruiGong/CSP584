@@ -118,13 +118,13 @@ public class ViewOrder extends HttpServlet {
                 String customerName = request.getParameter("customerName");
                 int orderId = 0;
                 orderId = Integer.parseInt(request.getParameter("orderId"));
-                ArrayList<OrderPayment> ListOrderPayment = new ArrayList<OrderPayment>();
+                ArrayList<OrderPayment> ListOrderPayment = new ArrayList<OrderPayment>();  //List of cancel item
                 //get the order from file
                 try {
                     FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
                     ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
                     orderPayments = (HashMap) objectInputStream.readObject();
-                } catch (Exception e) {
+                } catch (Exception ignored) {
 
                 }
                 //get the exact order with same ordername and add it into cancel list to remove it later
@@ -143,20 +143,10 @@ public class ViewOrder extends HttpServlet {
                 }
 
                 //save the updated hashmap with removed order to the file
-                try {
-                    FileOutputStream fileOutputStream = new FileOutputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-                    ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                    objectOutputStream.writeObject(orderPayments);
-                    objectOutputStream.flush();
-                    objectOutputStream.close();
-                    fileOutputStream.close();
-                } catch (Exception e) {
-
-                }
+                utility.updateOrderFile(orderPayments);
                 response.sendRedirect("SalesmanHome");
                 return;
-            }
-            else {
+            } else {
                 pw.print("<h4 style='color:red'>Please select any product</h4>");
             }
         }

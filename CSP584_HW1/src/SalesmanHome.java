@@ -208,9 +208,8 @@ public class SalesmanHome extends HttpServlet {
             for (OrderPayment od : entry.getValue()) {
 
 
-                pw.print("<form method='post' action='ViewOrder'>");
+                pw.print("<form method='post' action='RemoveUpdateOrder'>");
                 pw.print("<tr>");
-                pw.print("<input type='hidden' name='orderName' value='" + od.getOrderName() + "'>");
                 pw.print("<td>" + od.getOrderId() + "</td>" +
                         "<td>" + od.getUserName() + "</td>" +
                         "<td>" + od.getOrderName() + "</td>" +
@@ -218,6 +217,7 @@ public class SalesmanHome extends HttpServlet {
                         "<td>" + od.getUserAddress() + "</td>" +
                         "<td>" + od.getCreditCardNo() + "</td>");
 
+                pw.print("<input type='hidden' name='orderName' value='" + od.getOrderName() + "'>");
                 pw.print("<input type='hidden' name='orderId' value='" + od.getOrderId() + "'>");
                 pw.print("<input type='hidden' name='username' value='" + od.getUserName() + "'>");
                 pw.print("<input type='hidden' name='productName' value='" + od.getOrderName() + "'>");
@@ -233,5 +233,4 @@ public class SalesmanHome extends HttpServlet {
         pw.print("</table>");
         pw.print("</h2></div></div></div>");
     }
-
 }
