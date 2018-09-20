@@ -87,7 +87,7 @@ public class ViewOrder extends HttpServlet {
                 }
                 // display the orders if there exist order with order id
                 if (size > 0) {
-                    pw.print("<table  class='gridtable'>");
+                    pw.print("<table class='gridtable'>");
                     pw.print("<tr><td></td>");
                     pw.print("<td>OrderId:</td>");
                     pw.print("<td>UserName:</td>");

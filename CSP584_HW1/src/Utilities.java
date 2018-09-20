@@ -495,6 +495,22 @@ public class Utilities extends HttpServlet {
         return false;
     }
 
+    public boolean cancelOrder(int orderId) {
+        String TOMCAT_HOME = System.getProperty("catalina.home");
+        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
+
+        try {
+            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            orderPayments = (HashMap) objectInputStream.readObject();
+        } catch (Exception ignored) {
+
+        }
+
+        orderPayments.remove(orderId);
+        return true;
+    }
+
 
     public void readXML() {
 

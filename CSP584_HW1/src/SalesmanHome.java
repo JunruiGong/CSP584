@@ -186,7 +186,7 @@ public class SalesmanHome extends HttpServlet {
             FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
 
@@ -195,38 +195,42 @@ public class SalesmanHome extends HttpServlet {
         pw.print("<a style='font-size: 24px;'>View Orders</a>");
         pw.print("</h2><div class='entry'>");
 
+        pw.print("<table class='gridtable'>");
+        pw.print("<tr>");
+        pw.print("<td>Order Id:</td>");
+        pw.print("<td>Username:</td>");
+        pw.print("<td>Product Name:</td>");
+        pw.print("<td>Price:</td></td>");
+        pw.print("<td>Address:</td>");
+        pw.print("<td>Credit Card:</td>");
+        pw.print("</tr>");
         for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
             for (OrderPayment od : entry.getValue()) {
 
-                pw.print("<table class='gridtable'>");
+
+                pw.print("<form method='post' action='ViewOrder'>");
                 pw.print("<tr>");
-                pw.print("<td> User Name: </td>");
-                pw.print("<td>" + od.getUserName() + "</td>");
-                pw.print("</tr>");
-//                pw.print("<tr>");
-//
-//                pw.print("<tr><td></td>");
-                pw.print("<td>OrderId:</td>");
-                pw.print("<td>UserName:</td>");
-                pw.print("<td>productOrdered:</td>");
-                pw.print("<td>productPrice:</td></tr>");
-
-
-                pw.print("<form method='get' action='ViewOrder'>");
-                //pw.print("<tr>");
-                //pw.print("<td><input type='hidden' name='orderName' value='" + od.getOrderName() + "'></td>");
                 pw.print("<input type='hidden' name='orderName' value='" + od.getOrderName() + "'>");
-                pw.print("<td>" + od.getOrderId() + "</td><td>" + od.getUserName() + "</td><td>" + od.getOrderName() + "</td><td>Price: " + od.getOrderPrice() + "</td>");
+                pw.print("<td>" + od.getOrderId() + "</td>" +
+                        "<td>" + od.getUserName() + "</td>" +
+                        "<td>" + od.getOrderName() + "</td>" +
+                        "<td>" + od.getOrderPrice() + "</td>" +
+                        "<td>" + od.getUserAddress() + "</td>" +
+                        "<td>" + od.getCreditCardNo() + "</td>");
+
                 pw.print("<input type='hidden' name='orderId' value='" + od.getOrderId() + "'>");
-                pw.print("<input type='hidden' name='customerName' value='" + od.getUserName() + "'>");
-                pw.print("<td><input type='submit' name='Order' value='CancelOrder' class='btnbuy'></td>");
-                //pw.print("</tr>");
+                pw.print("<input type='hidden' name='username' value='" + od.getUserName() + "'>");
+                pw.print("<input type='hidden' name='productName' value='" + od.getOrderName() + "'>");
+                pw.print("<input type='hidden' name='price' value='" + od.getOrderPrice() + "'>");
+                pw.print("<input type='hidden' name='address' value='" + od.getUserAddress() + "'>");
+                pw.print("<input type='hidden' name='creditCard' value='" + od.getCreditCardNo() + "'>");
+                pw.print("<td><input type='submit' name='Order' value='Cancel' class='btnbuy'></td>");
+                pw.print("<td><input type='submit' name='Order' value='Update' class='btnbuy'></td>");
+                pw.print("</tr>");
                 pw.print("</form>");
-                pw.print("<br>");
             }
         }
         pw.print("</table>");
-//        pw.print("</table>");
         pw.print("</h2></div></div></div>");
     }
 
