@@ -44,14 +44,16 @@ public class Account extends HttpServlet {
             pw.print("</h2><div class='entry'>");
             User user = utility.getUser();
             pw.print("<table class='gridtable'>");
-            pw.print("<tr>");
-            pw.print("<td> User Name: </td>");
-            pw.print("<td>" + user.getName() + "</td>");
-            pw.print("</tr>");
-            pw.print("<tr>");
-            pw.print("<td> User Type: </td>");
-            pw.print("<td>" + user.getUsertype() + "</td>");
-            pw.print("</tr>");
+//            pw.print("<tr>");
+//            pw.print("<td> User Name: </td>");
+//            pw.print("<td>" + user.getName() + "</td>");
+//            pw.print("</tr>");
+
+//            pw.print("<tr>");
+//            pw.print("<td> User Type: </td>");
+//            pw.print("<td>" + user.getUsertype() + "</td>");
+//            pw.print("</tr>");
+
             HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
             String TOMCAT_HOME = System.getProperty("catalina.home");
             try {
@@ -70,7 +72,7 @@ public class Account extends HttpServlet {
 
             if (size > 0) {
 
-                pw.print("<tr><td></td>");
+                pw.print("<tr>");
                 pw.print("<td>OrderId:</td>");
                 pw.print("<td>UserName:</td>");
                 pw.print("<td>productOrdered:</td>");
@@ -78,19 +80,23 @@ public class Account extends HttpServlet {
                 for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
                     for (OrderPayment oi : entry.getValue())
                         if (oi.getUserName().equals(user.getName())) {
-                            pw.print("<form method='get' action='ViewOrder'>");
+                            pw.print("<form method='post' action='RemoveUpdateOrder'>");
                             pw.print("<tr>");
-                            pw.print("<td><input type='radio' name='orderName' value='" + oi.getOrderName() + "'></td>");
+                            //pw.print("<td><input type='radio' name='orderName' value='" + oi.getOrderName() + "'></td>");
                             pw.print("<td>" + oi.getOrderId() + "</td><td>" + oi.getUserName() + "</td><td>" + oi.getOrderName() + "</td><td>Price: " + oi.getOrderPrice() + "</td>");
-                            pw.print("<td><input type='hidden' name='orderId' value='" + oi.getOrderId() + "'></td>");
-                            pw.print("<td><input type='submit' name='Order' value='CancelOrder' class='btnbuy'></td>");
+                            pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
+                            pw.print("<td><input type='submit' name='Order' value='Cancel' class='btnbuy'></td>");
+                            pw.print("<input type='hidden' name='orderId' value='" + oi.getOrderId() + "'>");
+                            pw.print("<input type='hidden' name='productName' value='" + oi.getOrderName() + "'>");
+                            pw.print("<input type='hidden' name='username' value='" + oi.getUserName() + "'>");
+                            pw.print("<input type='hidden' name='userType' value='customer'>");
                             pw.print("</tr>");
                             pw.print("</form>");
                         }
                 }
                 pw.print("</table>");
             } else {
-                pw.print("<h4 style='color:red'>You have not placed any order with this order id</h4>");
+                pw.print("<h4 style='color:red'>You have not placed any order with this account</h4>");
             }
             pw.print("</table>");
             pw.print("</h2></div></div></div>");

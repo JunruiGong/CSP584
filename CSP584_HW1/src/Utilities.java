@@ -69,8 +69,7 @@ public class Utilities extends HttpServlet {
                 String userType = session.getAttribute("userType").toString();
                 switch (userType) {
                     case "Customer":
-                        result = result + "<li><a href='ViewOrder'><span class='glyphicon'>ViewOrder</span></a></li>"
-                                + "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
+                        result = result + "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
                                 + "<li><a href='Account'><span class='glyphicon'>Account</span></a></li>"
                                 + "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
                         break;
@@ -796,8 +795,7 @@ public class Utilities extends HttpServlet {
         updateOrderFile(orderPayments);
     }
 
-    public void storeNewOrder(int orderId,
-                              String orderName, String customerName, double orderPrice, String userAddress, String creditCardNo) {
+    public void storeNewOrder(int orderId, String orderName, String customerName, double orderPrice, String userAddress, String creditCardNo) {
         HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
         String TOMCAT_HOME = System.getProperty("catalina.home");
         // get the payment details file

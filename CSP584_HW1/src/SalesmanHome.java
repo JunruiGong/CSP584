@@ -34,15 +34,6 @@ public class SalesmanHome extends HttpServlet {
         String customerName = request.getParameter("customerName");
         String itemName = request.getParameter("itemName");
         String itemCatalog = request.getParameter("itemCatalog");
-        double totalPrice = 0;
-        if (utility.isContainsStr(request.getParameter("totalPrice"))) {
-            //含有字母，报错
-            error_msg = "Passwords doesn't match!";  //已完成测试
-            displaySalesmanHome(request, response, pw, "order");
-            return;
-        } else {
-            totalPrice = Double.parseDouble(request.getParameter("totalPrice"));
-        }
         String creditCardNo = request.getParameter("creditCardNo");
         String customerAddress = request.getParameter("customerAddress");
 
@@ -59,7 +50,7 @@ public class SalesmanHome extends HttpServlet {
 
         }
 
-        if (customerName.isEmpty() && itemName.isEmpty()) {
+        if (request.getParameter("customer") != null && request.getParameter("customer").equals("Create Customer")) {
             //提交的是创建customer的表格
             if (!password.equals(repassword)) {
                 error_msg = "Passwords doesn't match!";  //已完成测试
@@ -88,15 +79,25 @@ public class SalesmanHome extends HttpServlet {
                 }
 
             }
-        } else {//提交的是创建订单的表格
+        } else if (request.getParameter("order") != null && request.getParameter("order").equals("Create Order")) {
+            //提交的是创建order的表格
             if (!hm.containsKey(customerName)) { //已完成测试
                 error_msg = "Cannot found this customer.";
                 displaySalesmanHome(request, response, pw, "order");
             } else {
+                double totalPrice;
+                if (utility.isContainsStr(request.getParameter("totalPrice"))) {
+                    //含有字母，报错
+                    error_msg = "Please type in number!";  //已完成测试
+                    displaySalesmanHome(request, response, pw, "order");
+                    return;
+                } else {
+                    totalPrice = Double.parseDouble(request.getParameter("totalPrice"));
+                }
                 if (utility.isItemExist(itemCatalog, itemName)) { //已完成测试  // 判断商品是否存在的功能没有完成
                     SimpleDateFormat df = new SimpleDateFormat("HHmmss");//设置日期格式
                     int orderId = Integer.parseInt(df.format(new Date()));  //设置订单号为当前下单时间的时分秒
-                    utility.storePayment(orderId, customerName, totalPrice, customerAddress, creditCardNo);
+                    utility.storeNewOrder(orderId, itemName, customerName, totalPrice, customerAddress, creditCardNo);
                     //创建order成功
                     error_msg = "The order created successfully.";
                     displaySalesmanHome(request, response, pw, "order");
@@ -134,7 +135,7 @@ public class SalesmanHome extends HttpServlet {
         pw.print("</td></tr><tr><td>");
         pw.print("<h4>Re-Password</h4></td><td><input type='password' name='repassword' value='' class='input' required></input>");
         pw.print("</td></tr><tr><td>");
-        pw.print("<input type='submit' class='btnbuy' value='Create' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
+        pw.print("<input type='submit' class='btnbuy' value='Create Customer' name='customer' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
         pw.print("</td></tr><tr><td></td><td>");
         pw.print("</td></tr></table>");
         pw.print("</form></div></div>");
@@ -173,7 +174,7 @@ public class SalesmanHome extends HttpServlet {
         pw.print("</td></tr><tr><td>");
         pw.print("<h4>Customer Address</h3></td><td><input type='text' name='customerAddress' value='' class='input' required></input>");
         pw.print("</td></tr><tr><td>");
-        pw.print("<input type='submit' class='btnbuy' value='Create' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
+        pw.print("<input type='submit' class='btnbuy' value='Create Order' name='order' style='float: right;height: 20px margin: 20px; margin-right: 10px;'></input>");
         pw.print("</td></tr><tr><td></td><td>");
         pw.print("</td></tr></table>");
         pw.print("</form></div></div>");
@@ -224,6 +225,7 @@ public class SalesmanHome extends HttpServlet {
                 pw.print("<input type='hidden' name='price' value='" + od.getOrderPrice() + "'>");
                 pw.print("<input type='hidden' name='address' value='" + od.getUserAddress() + "'>");
                 pw.print("<input type='hidden' name='creditCard' value='" + od.getCreditCardNo() + "'>");
+                pw.print("<input type='hidden' name='userType' value='Salesman'>");
                 pw.print("<td><input type='submit' name='Order' value='Cancel' class='btnbuy'></td>");
                 pw.print("<td><input type='submit' name='Order' value='Update' class='btnbuy'></td>");
                 pw.print("</tr>");

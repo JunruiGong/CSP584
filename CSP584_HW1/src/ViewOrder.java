@@ -40,7 +40,7 @@ public class ViewOrder extends HttpServlet {
 		if order button is clicked user will be directed to this same servlet and user has given order number 
 		then this page shows all the order details*/
 
-        if (request.getParameter("Order") == null) {
+        if (request.getParameter("orderId") == null) {
             pw.print("<table align='center'><tr><td>Enter OrderNo &nbsp&nbsp<input name='orderId' type='text'></td>");
             pw.print("<td><input type='submit' name='Order' value='ViewOrder' class='btnbuy'></td></tr></table>");
         }
@@ -54,7 +54,7 @@ public class ViewOrder extends HttpServlet {
             FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
 		
 
@@ -144,7 +144,7 @@ public class ViewOrder extends HttpServlet {
 
                 //save the updated hashmap with removed order to the file
                 utility.updateOrderFile(orderPayments);
-                response.sendRedirect("SalesmanHome");
+                response.sendRedirect("ViewOrder");
                 return;
             } else {
                 pw.print("<h4 style='color:red'>Please select any product</h4>");

@@ -3,12 +3,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/RemoveUpdateOrder")
 public class RemoveUpdateOrder extends HttpServlet {
+    HttpSession session;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
@@ -22,12 +24,19 @@ public class RemoveUpdateOrder extends HttpServlet {
         String price = request.getParameter("price");
         String address = request.getParameter("address");
         String creditCard = request.getParameter("creditCard");
+        String userType = request.getParameter("userType");
 
 
         if (request.getParameter("Order") != null && request.getParameter("Order").equals("Cancel")) {
             //Cancel Order
             utility.removeOldOrder(orderId, productName, username);
-            response.sendRedirect("SalesmanHome");
+
+            if (userType.equals("customer")) {
+                response.sendRedirect("Account");
+            } else {
+
+                response.sendRedirect("SalesmanHome");
+            }
 
 
         } else if (request.getParameter("Order") != null && request.getParameter("Order").equals("Update")) {
