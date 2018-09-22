@@ -6,7 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
@@ -54,6 +56,29 @@ public class Payment extends HttpServlet {
             pw.print("&nbsp&nbsp");
             pw.print("is stored ");
             pw.print("<br>Your Order No is " + (orderId));
+
+
+            //获得delivery date
+            SimpleDateFormat deliveryDateFormat = new SimpleDateFormat("MM-dd");//设置日期格式
+            String today = deliveryDateFormat.format(new Date());
+            Calendar c = Calendar.getInstance();
+            try {
+                c.setTime(deliveryDateFormat.parse(today));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            c.add(Calendar.DATE, 14);  // number of days to add
+            today = deliveryDateFormat.format(c.getTime());
+
+//            String dt = "2008-01-01";  // Start date
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//            Calendar c = Calendar.getInstance();
+//            c.setTime(sdf.parse(dt));
+//            c.add(Calendar.DATE, 1);  // number of days to add
+//            dt = sdf.format(c.getTime());  // dt is now the new date
+
+
+            pw.print("<br>Estimated delivery date: " + today);
             pw.print("</h2></div></div></div>");
             utility.printHtml("Footer.html");
         } else {

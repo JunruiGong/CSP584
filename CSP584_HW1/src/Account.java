@@ -78,7 +78,7 @@ public class Account extends HttpServlet {
                 pw.print("<td>productOrdered:</td>");
                 pw.print("<td>productPrice:</td></tr>");
                 for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
-                    for (OrderPayment oi : entry.getValue())
+                    for (OrderPayment oi : entry.getValue()) 
                         if (oi.getUserName().equals(user.getName())) {
                             pw.print("<form method='post' action='RemoveUpdateOrder'>");
                             pw.print("<tr>");
@@ -93,6 +93,7 @@ public class Account extends HttpServlet {
                             pw.print("</tr>");
                             pw.print("</form>");
                         }
+
                 }
                 pw.print("</table>");
             } else {

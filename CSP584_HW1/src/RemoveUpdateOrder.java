@@ -5,8 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @WebServlet("/RemoveUpdateOrder")
 public class RemoveUpdateOrder extends HttpServlet {
@@ -37,7 +35,6 @@ public class RemoveUpdateOrder extends HttpServlet {
 
                 response.sendRedirect("SalesmanHome");
             }
-
 
         } else if (request.getParameter("Order") != null && request.getParameter("Order").equals("Update")) {
             //Update Order
@@ -77,8 +74,7 @@ public class RemoveUpdateOrder extends HttpServlet {
 
             pw.print("<h4>Credit Card</h4></td><td><input type='text' name='creditCard' value='" + creditCard + "' class='input' required></input>");
             pw.print("</td></tr><tr><td>");
-
-
+            
             pw.print("<input type='hidden' name='orderId' value='" + orderId + "'>");
             pw.print("<input type='hidden' name='customerName' value='" + username + "'>");
             pw.print("<input type='hidden' name='productName' value='" + productName + "'>");

@@ -57,7 +57,6 @@ public class Login extends HttpServlet {
                     response.sendRedirect("SalesmanHome");
                     return;
                 }
-
             }
         }
         //用户名不存在

@@ -32,13 +32,15 @@
     <session id="938305175">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.6" value="7" />
-          <entry key="project.open.time.7" value="5" />
+          <entry key="project.closed" value="29" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="9" />
+          <entry key="project.open.time.7" value="9" />
           <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -46,7 +48,7 @@
           <entry key="class" value="1" />
           <entry key="css" value="4" />
           <entry key="html" value="50" />
-          <entry key="java" value="416" />
+          <entry key="java" value="423" />
           <entry key="jsp" value="20" />
           <entry key="txt" value="3" />
           <entry key="xml" value="21" />
@@ -57,7 +59,7 @@
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="4" />
           <entry key="HTML" value="50" />
-          <entry key="JAVA" value="416" />
+          <entry key="JAVA" value="423" />
           <entry key="JSP" value="20" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="21" />
@@ -68,7 +70,7 @@
           <entry key="css" value="30" />
           <entry key="dummy" value="30" />
           <entry key="html" value="922" />
-          <entry key="java" value="12756" />
+          <entry key="java" value="12910" />
           <entry key="jsp" value="498" />
           <entry key="xml" value="1318" />
         </counts>
@@ -77,7 +79,7 @@
         <counts>
           <entry key="CSS" value="30" />
           <entry key="HTML" value="922" />
-          <entry key="JAVA" value="12756" />
+          <entry key="JAVA" value="12910" />
           <entry key="JSP" value="498" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="XML" value="1318" />
@@ -92,47 +94,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StoreManagerHome.java">
+        <entry file="file://$PROJECT_DIR$/src/RemoveUpdateOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2188">
-              <caret line="155" column="47" lean-forward="true" selection-start-line="155" selection-start-column="47" selection-end-line="155" selection-end-column="47" />
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CheckOut.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="44" column="60" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SalesmanHome.java">
+        <entry file="file://$PROJECT_DIR$/src/Payment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="227" column="78" selection-end-line="238" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="797" column="43" selection-start-line="797" selection-start-column="43" selection-end-line="797" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#20854#20888#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RemoveUpdateOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="37" column="51" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="51" />
+            <state relative-caret-position="303">
+              <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,12 +206,10 @@
         <option value="$PROJECT_DIR$/src/Home.java" />
         <option value="$PROJECT_DIR$/src/Registration.java" />
         <option value="$PROJECT_DIR$/src/CreateOrder.java" />
-        <option value="$PROJECT_DIR$/src/Payment.java" />
         <option value="$PROJECT_DIR$/src/RemoveCart.java" />
         <option value="$PROJECT_DIR$/src/RemoveProduct.java" />
         <option value="$PROJECT_DIR$/src/ProductCatalog.xml" />
         <option value="$PROJECT_DIR$/web/Header.html" />
-        <option value="$PROJECT_DIR$/src/Login.java" />
         <option value="$PROJECT_DIR$/src/RemoveUpdateProduct.java" />
         <option value="$PROJECT_DIR$/src/UpdateProduct.java" />
         <option value="$PROJECT_DIR$/src/StoreManagerHome.java" />
@@ -233,10 +217,12 @@
         <option value="$PROJECT_DIR$/web/Content.html" />
         <option value="$PROJECT_DIR$/src/Cart.java" />
         <option value="$PROJECT_DIR$/src/ViewOrder.java" />
-        <option value="$PROJECT_DIR$/src/RemoveUpdateOrder.java" />
-        <option value="$PROJECT_DIR$/src/Account.java" />
         <option value="$PROJECT_DIR$/src/Utilities.java" />
         <option value="$PROJECT_DIR$/src/SalesmanHome.java" />
+        <option value="$PROJECT_DIR$/src/Account.java" />
+        <option value="$PROJECT_DIR$/src/Login.java" />
+        <option value="$PROJECT_DIR$/src/RemoveUpdateOrder.java" />
+        <option value="$PROJECT_DIR$/src/Payment.java" />
       </list>
     </option>
   </component>
@@ -253,9 +239,15 @@
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/usr/local/Cellar/maven/3.5.4/libexec" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="239" />
-    <option name="y" value="1103" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
   </component>
@@ -302,14 +294,14 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537477368219" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537477743036" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31149426" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -335,6 +327,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.90" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -347,6 +340,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_CSP584_HW1" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -437,12 +431,23 @@
       <workItem from="1537368200142" duration="2991000" />
       <workItem from="1537371231505" duration="8758000" />
       <workItem from="1537402209684" duration="8927000" />
-      <workItem from="1537455654418" duration="13397000" />
+      <workItem from="1537455654418" duration="14057000" />
+      <workItem from="1537495729036" duration="120000" />
+      <workItem from="1537548559766" duration="792000" />
+      <workItem from="1537554320836" duration="1293000" />
+      <workItem from="1537558459440" duration="4000" />
+      <workItem from="1537558512079" duration="1075000" />
+      <workItem from="1537563768956" duration="3000" />
+      <workItem from="1537565150409" duration="336000" />
+      <workItem from="1537569324408" duration="45000" />
+      <workItem from="1537573058898" duration="1996000" />
+      <workItem from="1537575503615" duration="76000" />
+      <workItem from="1537575597636" duration="1659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188275000" />
+    <option name="totallyTimeSpent" value="196334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,10 +459,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="227" y="1103" width="1440" height="813" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18884121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -467,14 +472,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3252149" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32378224" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3295129" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32808024" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295129" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.2034384" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3295129" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -496,34 +501,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/RemoveUpdateOrder.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Tutorial_1/Tutorial_1/WEB-INF/classes/SaxParserDataStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="227" column="48" selection-start-line="227" selection-start-column="48" selection-end-line="227" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tutorial_1/Tutorial_1/WEB-INF/classes/SaxParserDataStore.java" />
     <entry file="file://$PROJECT_DIR$/src/Laptop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="e#1511#1512#0" expanded="true" />
-            <element signature="e#1542#1543#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,9 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/CSP 584 Web Application/Lecture 4/S4/ShoppingCart.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Documents/CSP 584 Web Application/Lecture 4/S4/ShoppingCart.java" />
     <entry file="file://$PROJECT_DIR$/src/AutoCompleteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -624,13 +605,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/CSP 584 Web Application/Lecture 4/S4/OrderPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="117" column="23" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Documents/CSP 584 Web Application/Lecture 4/S4/OrderPage.java" />
     <entry file="file://$PROJECT_DIR$/src/OrdersHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -642,13 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="77" column="53" lean-forward="true" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PetTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -670,10 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="633" column="19" selection-start-line="633" selection-start-column="19" selection-end-line="633" selection-end-column="19" />
-          <folding>
-            <element signature="e#23072#23073#0" expanded="true" />
-            <element signature="e#23112#23113#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,9 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="47" column="57" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,19 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="186" column="72" selection-start-line="186" selection-start-column="72" selection-end-line="186" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="56" column="55" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="55" />
-          <folding>
-            <element signature="e#1151#1165#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,9 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="57" column="81" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="57" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,30 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OrderPayment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CheckOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="44" column="60" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="35" column="86" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="35" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -833,10 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="78" column="67" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#920#935#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,48 +771,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StoreManagerHome.java">
+    <entry file="file://$PROJECT_DIR$/src/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2188">
-          <caret line="155" column="47" lean-forward="true" selection-start-line="155" selection-start-column="47" selection-end-line="155" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="797" column="43" selection-start-line="797" selection-start-column="43" selection-end-line="797" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#20854#20888#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RemoveUpdateOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="37" column="51" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="621">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SalesmanHome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="227" column="78" selection-end-line="238" />
+        <state relative-caret-position="621">
+          <caret line="201" column="13" selection-start-line="201" selection-start-column="13" selection-end-line="201" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StoreManagerHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="244" column="99" selection-start-line="244" selection-start-column="99" selection-end-line="244" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PetTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="721" column="27" selection-start-line="721" selection-start-column="27" selection-end-line="721" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OrderPayment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RemoveUpdateOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CheckOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="44" column="60" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="65" column="59" lean-forward="true" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -948,7 +902,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31149426" />
               </list>
             </option>
           </splitter-proportions>
