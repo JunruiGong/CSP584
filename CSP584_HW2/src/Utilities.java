@@ -495,23 +495,9 @@ public class Utilities extends HttpServlet {
     }
 
     public boolean cancelOrder(int orderId) {
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
 
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
+        return MySqlDataStoreUtilities.deleteOrder(orderId);
 
-        }
-
-        orderPayments.remove(orderId);
-
-        //save the updated hashmap with removed order to the file
-        updateOrderFile(orderPayments);
-
-        return true;
     }
 
     //将更新后的数据保存到文件中
@@ -533,32 +519,8 @@ public class Utilities extends HttpServlet {
 
     public void updateOrder(int orderId, String customerName,
                             String orderName, double orderPrice, String userAddress, String creditCardNo) {
-        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        // get the payment details file
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
-
-        }
-        if (orderPayments == null) {
-            orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        }
-        // if there exist order id already add it into same list for order id or create a new record with order id
-
-        if (!orderPayments.containsKey(orderId)) {
-            ArrayList<OrderPayment> arr = new ArrayList<OrderPayment>();
-            orderPayments.put(orderId, arr);
-        }
-        ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
-
-        OrderPayment orderpayment = new OrderPayment(orderId, customerName, orderName, orderPrice, userAddress, creditCardNo);
-        listOrderPayment.add(orderpayment);
-
-        // add order details into file
-        updateOrderFile(orderPayments);
+        MySqlDataStoreUtilities.deleteOrder(orderId);
+        MySqlDataStoreUtilities.insertOrder(orderId, customerName, orderName, orderPrice, userAddress, creditCardNo);
     }
 
 
@@ -602,13 +564,8 @@ public class Utilities extends HttpServlet {
     public User getUser() {
         String usertype = usertype();
         HashMap<String, User> hm = new HashMap<String, User>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/UserDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            hm = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
-        }
+        hm = MySqlDataStoreUtilities.selectUser();
+
         return hm.get(username());
     }
 
@@ -623,14 +580,9 @@ public class Utilities extends HttpServlet {
     /*  getOrdersPaymentSize Function gets  the size of OrderPayment */
     public int getOrderPaymentSize() {
         HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
 
-        }
+        orderPayments = MySqlDataStoreUtilities.selectOrder();
+
         int size = 0;
         for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
             size = size + 1;
@@ -735,93 +687,18 @@ public class Utilities extends HttpServlet {
     // store the payment details for orders
     public void storePayment(int orderId,
                              String orderName, double orderPrice, String userAddress, String creditCardNo) {
-        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        // get the payment details file
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
 
-        }
-        if (orderPayments == null) {
-            orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        }
-        // if there exist order id already add it into same list for order id or create a new record with order id
+        String username = (String) session.getAttribute("username");
 
-        if (!orderPayments.containsKey(orderId)) {
-            ArrayList<OrderPayment> arr = new ArrayList<OrderPayment>();
-            orderPayments.put(orderId, arr);
-        }
-        ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
-
-        OrderPayment orderpayment = new OrderPayment(orderId, username(), orderName, orderPrice, userAddress, creditCardNo);
-        listOrderPayment.add(orderpayment);
-
-        // add order details into file
-        updateOrderFile(orderPayments);
-
+        MySqlDataStoreUtilities.insertOrder(orderId, username, orderName, orderPrice, userAddress, creditCardNo);
     }
 
-    public void removeOldOrder(int orderId, String orderName, String customerName) {
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        ArrayList<OrderPayment> ListOrderPayment = new ArrayList<OrderPayment>();
-        //get the order from file
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception e) {
-
-        }
-        //get the exact order with same ordername and add it into cancel list to remove it later
-        for (OrderPayment oi : orderPayments.get(orderId)) {
-            if (oi.getOrderName().equals(orderName) && oi.getUserName().equals(customerName)) {
-                ListOrderPayment.add(oi);
-                //pw.print("<h4 style='color:red'>Your Order is Cancelled</h4>");
-//                        response.sendRedirect("SalesmanHome");
-//                        return;
-            }
-        }
-        //remove all the orders from hashmap that exist in cancel list
-        orderPayments.get(orderId).removeAll(ListOrderPayment);
-        if (orderPayments.get(orderId).size() == 0) {
-            orderPayments.remove(orderId);
-        }
-
-        //save the updated hashmap with removed order to the file
-        updateOrderFile(orderPayments);
+    public boolean removeOldOrder(int orderId, String orderName, String customerName) {
+        return MySqlDataStoreUtilities.deleteOrder(orderId);
     }
 
     public void storeNewOrder(int orderId, String orderName, String customerName, double orderPrice, String userAddress, String creditCardNo) {
-        HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
-        // get the payment details file
-        try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
-        } catch (Exception ignored) {
-
-        }
-        if (orderPayments == null) {
-            orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        }
-        // if there exist order id already add it into same list for order id or create a new record with order id
-
-        if (!orderPayments.containsKey(orderId)) {
-            ArrayList<OrderPayment> arr = new ArrayList<OrderPayment>();
-            orderPayments.put(orderId, arr);
-        }
-        ArrayList<OrderPayment> listOrderPayment = orderPayments.get(orderId);
-
-        OrderPayment orderpayment = new OrderPayment(orderId, customerName, orderName, orderPrice, userAddress, creditCardNo);
-        listOrderPayment.add(orderpayment);
-
-        // add order details into file
-        updateOrderFile(orderPayments);
+        MySqlDataStoreUtilities.insertOrder(orderId, orderName, customerName, orderPrice, userAddress, creditCardNo);
 
     }
 

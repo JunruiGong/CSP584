@@ -43,9 +43,7 @@ public class SalesmanHome extends HttpServlet {
 
         //get the user details from file
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/UserDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            hm = (HashMap) objectInputStream.readObject();
+            hm = MySqlDataStoreUtilities.selectUser();
         } catch (Exception e) {
 
         }

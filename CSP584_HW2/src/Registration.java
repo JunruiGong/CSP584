@@ -41,7 +41,6 @@ public class Registration extends HttpServlet {
             error_msg = "Passwords doesn't match!";
         } else {
 
-
             HashMap<String, User> hm = new HashMap<String, User>();
 
             try {

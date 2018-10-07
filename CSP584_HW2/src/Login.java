@@ -26,13 +26,11 @@ public class Login extends HttpServlet {
         String userType = request.getParameter("userType");
 
         HashMap<String, User> hm = new HashMap<String, User>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
         //user details are validated using a file
         //if the file contains username and password user entered user will be directed to home page
         //else error message will be shown
         try {
-            hm=MySqlDataStoreUtilities.selectUser();
-
+            hm = MySqlDataStoreUtilities.selectUser();
         } catch (Exception e) {
 
         }

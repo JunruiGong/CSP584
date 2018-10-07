@@ -443,7 +443,7 @@ public class SaxParserDataStore extends DefaultHandler {
     //call the constructor to parse the xml and get product details
     public static void addHashmap() {
         String TOMCAT_HOME = System.getProperty("catalina.home");
-        new SaxParserDataStore(TOMCAT_HOME + "/webapps/CSP584HW1/WEB-INF/classes/ProductCatalog.xml");
+        new SaxParserDataStore(TOMCAT_HOME + "/webapps/CSP584HW2/WEB-INF/classes/ProductCatalog.xml");
 
         //new SaxParserDataStore("/Users/junruigong/Documents/apache-tomcat-7.0.90/webapps/CSP584HW1/ProductCatalog.xml");
     }

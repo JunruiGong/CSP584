@@ -15,26 +15,27 @@ public class MySqlDataStoreUtilities {
     }
 
 
-    public static void deleteOrder(int orderId, String orderName) {
+    public static boolean deleteOrder(int orderId) {
         try {
 
             getConnection();
-            String deleteOrderQuery = "Delete from order where OrderId=? and orderName=?";
+            String deleteOrderQuery = "Delete from order where OrderId=?";
             PreparedStatement pst = conn.prepareStatement(deleteOrderQuery);
             pst.setInt(1, orderId);
-            pst.setString(2, orderName);
             pst.executeUpdate();
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            return false;
         }
+        return true;
     }
 
     public static void insertOrder(int orderId, String userName, String orderName, double orderPrice, String userAddress, String creditCardNo) {
         try {
 
             getConnection();
-            String insertIntoCustomerOrderQuery = "INSERT INTO order(OrderId,UserName,OrderName,OrderPrice,userAddress,creditCardNo) "
-                    + "VALUES (?,?,?,?,?,?);";
+            String insertIntoCustomerOrderQuery = "INSERT INTO order (OrderId,UserName,OrderName,OrderPrice,userAddress,creditCardNo) " +
+                    "VALUES (?,?,?,?,?,?);";
 
             PreparedStatement pst = conn.prepareStatement(insertIntoCustomerOrderQuery);
             //set the parameter for each column and execute the prepared statement

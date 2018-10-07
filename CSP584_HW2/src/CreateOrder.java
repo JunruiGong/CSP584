@@ -25,44 +25,18 @@ public class CreateOrder extends HttpServlet {
 
 
         HashMap<String, User> hm = new HashMap<String, User>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
 
         //get the user details from file
 
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/UserDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            hm = (HashMap) objectInputStream.readObject();
+            hm = MySqlDataStoreUtilities.selectUser();
         } catch (Exception e) {
 
         }
 
 
-        if (!hm.containsKey(customerName))
+        if (!hm.containsKey(customerName)) {
             error_msg = "Customer doesn't exist.";
-        else {
-
-
-
-
-
-//
-//
-//            User user = new User(username, password, "Customer");
-//            hm.put(username, user);
-//            FileOutputStream fileOutputStream = new FileOutputStream(TOMCAT_HOME + "/webapps/CSP584HW1/UserDetails.txt");
-//            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-//            objectOutputStream.writeObject(hm);
-//            objectOutputStream.flush();
-//            objectOutputStream.close();
-//            fileOutputStream.close();
-//            HttpSession session = request.getSession(true);
-//            session.setAttribute("login_msg", "The customer account created successfully.");
-//
-//            //创建成功
-//            error_msg = "The customer account has been created.";
-//            displaySalesmanHome(request, response, pw, true);
-//            return;
         }
 
 

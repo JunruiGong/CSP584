@@ -55,11 +55,8 @@ public class Account extends HttpServlet {
 //            pw.print("</tr>");
 
             HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-            String TOMCAT_HOME = System.getProperty("catalina.home");
             try {
-                FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                orderPayments = (HashMap) objectInputStream.readObject();
+                orderPayments = MySqlDataStoreUtilities.selectOrder();
             } catch (Exception e) {
 
             }
@@ -78,7 +75,7 @@ public class Account extends HttpServlet {
                 pw.print("<td>productOrdered:</td>");
                 pw.print("<td>productPrice:</td></tr>");
                 for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
-                    for (OrderPayment oi : entry.getValue()) 
+                    for (OrderPayment oi : entry.getValue())
                         if (oi.getUserName().equals(user.getName())) {
                             pw.print("<form method='post' action='RemoveUpdateOrder'>");
                             pw.print("<tr>");
