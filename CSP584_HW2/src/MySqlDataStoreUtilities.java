@@ -19,7 +19,7 @@ public class MySqlDataStoreUtilities {
         try {
 
             getConnection();
-            String deleteOrderQuery = "Delete from order where OrderId=?";
+            String deleteOrderQuery = "Delete from orders where OrderId=?";
             PreparedStatement pst = conn.prepareStatement(deleteOrderQuery);
             pst.setInt(1, orderId);
             pst.executeUpdate();
@@ -34,8 +34,10 @@ public class MySqlDataStoreUtilities {
         try {
 
             getConnection();
-            String insertIntoCustomerOrderQuery = "INSERT INTO order (OrderId,UserName,OrderName,OrderPrice,userAddress,creditCardNo) " +
-                    "VALUES (?,?,?,?,?,?);";
+//            String insertIntoCustomerOrderQuery = "INSERT INTO orders (orderId,userName,orderName,orderPrice,userAddress,creditCardNo) " +
+//                    "VALUES (?,?,?,?,?,?);";
+
+            String insertIntoCustomerOrderQuery = "insert into orders (orderID, userName, orderName, orderPrice, userAddress, creditCardNo) VALUES (?,?,?,?,?,?);";
 
             PreparedStatement pst = conn.prepareStatement(insertIntoCustomerOrderQuery);
             //set the parameter for each column and execute the prepared statement
@@ -59,7 +61,7 @@ public class MySqlDataStoreUtilities {
 
             getConnection();
             //select the table
-            String selectOrderQuery = "select * from order";
+            String selectOrderQuery = "select * from orders";
             PreparedStatement pst = conn.prepareStatement(selectOrderQuery);
             ResultSet rs = pst.executeQuery();
             ArrayList<OrderPayment> orderList = new ArrayList<OrderPayment>();

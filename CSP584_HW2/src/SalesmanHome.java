@@ -60,14 +60,7 @@ public class SalesmanHome extends HttpServlet {
                     error_msg = "Username already exist."; //已完成测试
                     displaySalesmanHome(request, response, pw, "customer");
                 } else {
-                    User user = new User(username, password, "Customer");
-                    hm.put(username, user);
-                    FileOutputStream fileOutputStream = new FileOutputStream(TOMCAT_HOME + "/webapps/CSP584HW1/UserDetails.txt");
-                    ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                    objectOutputStream.writeObject(hm);
-                    objectOutputStream.flush();
-                    objectOutputStream.close();
-                    fileOutputStream.close();
+                    MySqlDataStoreUtilities.insertUser(username, password,repassword,"customer");
                     HttpSession session = request.getSession(true);
                     session.setAttribute("login_msg", "The customer account created successfully.");
 

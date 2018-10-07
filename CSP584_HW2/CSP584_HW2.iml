@@ -24,5 +24,6 @@
     <orderEntry type="library" name="dom4j-1.6" level="project" />
     <orderEntry type="library" name="crimson" level="project" />
     <orderEntry type="library" name="Jar" level="project" />
+    <orderEntry type="library" name="mongo-java-driver-3.2.2" level="project" />
   </component>
 </module>

@@ -539,6 +539,36 @@ public class Utilities extends HttpServlet {
         }
     }
 
+    public String storeReview(String productname, String producttype, String productmaker, String reviewrating, String reviewdate, String reviewtext, String reatilerpin, String price, String city) {
+        String message = MongoDBDataStoreUtilities.insertReview(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city);
+        if (!message.equals("Successfull")) {
+            return "UnSuccessfull";
+        } else {
+            HashMap<String, ArrayList<Review>> reviews = new HashMap<String, ArrayList<Review>>();
+            try {
+                reviews = MongoDBDataStoreUtilities.selectReview();
+            } catch (Exception e) {
+
+            }
+            if (reviews == null) {
+                reviews = new HashMap<String, ArrayList<Review>>();
+            }
+            // if there exist product review already add it into same list for productname or create a new record with product name
+
+            if (!reviews.containsKey(productname)) {
+                ArrayList<Review> arr = new ArrayList<Review>();
+                reviews.put(productname, arr);
+            }
+            ArrayList<Review> listReview = reviews.get(productname);
+            Review review = new Review(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city);
+            listReview.add(review);
+
+            // add Reviews into database
+
+            return "Successfull";
+        }
+    }
+
     public boolean isContainsStr(String string) {
         String regex = ".*[a-zA-Z]+.*";
         Matcher m = Pattern.compile(regex).matcher(string);
