@@ -5,6 +5,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import com.mongodb.DBCursor;
 import com.mongodb.AggregationOutput;
+import com.mongodb.client.MongoDatabase;
 
 import java.util.*;
 
@@ -18,6 +19,17 @@ public class MongoDBDataStoreUtilities {
         DB db = mongo.getDB("CustomerReviews");
         myReviews = db.getCollection("myReviews");
         return myReviews;
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+            MongoDatabase mongoDatabase = mongoClient.getDatabase("mycol");
+            System.out.println("Connect to database successfully");
+        } catch (Exception e) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
     }
 
 
@@ -36,9 +48,9 @@ public class MongoDBDataStoreUtilities {
                     append("retailercity", retailercity).
                     append("price", (int) Double.parseDouble(price));
             myReviews.insert(doc);
-            return "Successfull";
+            return "Successful";
         } catch (Exception e) {
-            return "UnSuccessfull";
+            return "UnSuccessful";
         }
 
     }
@@ -70,13 +82,11 @@ public class MongoDBDataStoreUtilities {
             reviews = null;
             return reviews;
         }
-
-
     }
 
 
-    public static ArrayList<Bestrating> topProducts() {
-        ArrayList<Bestrating> Bestrate = new ArrayList<Bestrating>();
+    public static ArrayList<BestRating> topProducts() {
+        ArrayList<BestRating> Bestrate = new ArrayList<BestRating>();
         try {
 
             getConnection();
@@ -89,7 +99,7 @@ public class MongoDBDataStoreUtilities {
 
                 String prodcutnm = obj.get("productName").toString();
                 String rating = obj.get("reviewRating").toString();
-                Bestrating best = new Bestrating(prodcutnm, rating);
+                BestRating best = new BestRating(prodcutnm, rating);
                 Bestrate.add(best);
             }
 
@@ -132,8 +142,6 @@ public class MongoDBDataStoreUtilities {
     public static ArrayList<Mostsold> mostsoldProducts() {
         ArrayList<Mostsold> mostsold = new ArrayList<Mostsold>();
         try {
-
-
             getConnection();
             DBObject groupProducts = new BasicDBObject("_id", "$productName");
             groupProducts.put("count", new BasicDBObject("$sum", 1));
@@ -148,14 +156,12 @@ public class MongoDBDataStoreUtilities {
             for (DBObject res : output.results()) {
 
 
-                String prodcutname = (res.get("_id")).toString();
+                String productName = (res.get("_id")).toString();
                 String count = (res.get("count")).toString();
-                Mostsold mostsld = new Mostsold(prodcutname, count);
+                Mostsold mostsld = new Mostsold(productName, count);
                 mostsold.add(mostsld);
 
             }
-
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -164,7 +170,6 @@ public class MongoDBDataStoreUtilities {
 
     //Get all the reviews grouped by product and zip code;
     public static ArrayList<Review> selectReviewForChart() {
-
 
         ArrayList<Review> reviewList = new ArrayList<Review>();
         try {
@@ -211,8 +216,5 @@ public class MongoDBDataStoreUtilities {
 
             return reviewList;
         }
-
     }
-
-
 }	

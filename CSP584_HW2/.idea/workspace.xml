@@ -95,7 +95,7 @@
     <session id="741791671">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="3" />
@@ -104,25 +104,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="69" />
-          <entry key="xml" value="1" />
+          <entry key="java" value="82" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="69" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="82" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="473" />
+          <entry key="dummy" value="1" />
+          <entry key="java" value="700" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="472" />
+          <entry key="JAVA" value="699" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -134,94 +136,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FitnessWatchList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="61" column="101" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Utilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="865">
-              <caret line="569" column="5" selection-end-line="808" />
-              <folding>
-                <element signature="e#22718#22745#0" expanded="true" />
-                <element signature="e#23282#23290#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AjaxUtility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="43" column="30" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Product.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FindReviews.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MongoDBDataStoreUtilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3280#3293#0" expanded="true" />
-                <element signature="e#4266#4276#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bestrating.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FitnessWatch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SubmitReview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="44" column="12" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Trending.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WriteReview.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -272,31 +202,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/WearableTechnology.java" />
-        <option value="$PROJECT_DIR$/src/FitnessWatch.java" />
-        <option value="$PROJECT_DIR$/src/PetTracker.java" />
-        <option value="$PROJECT_DIR$/src/SmartWatch.java" />
-        <option value="$PROJECT_DIR$/src/VirtualReality.java" />
-        <option value="$PROJECT_DIR$/src/Headphone.java" />
-        <option value="$PROJECT_DIR$/src/CheckOut.java" />
-        <option value="$PROJECT_DIR$/../Tutorial_1/Tutorial_1/WEB-INF/classes/ConsoleList.java" />
         <option value="$PROJECT_DIR$/../Tutorial_1/Tutorial_1/WEB-INF/classes/SaxParserDataStore.java" />
         <option value="$USER_HOME$/Documents/apache-tomcat-7.0.90/webapps/Tutorial_1/WEB-INF/classes/SaxParserDataStore.java" />
-        <option value="$PROJECT_DIR$/src/VoiceAssistantList.java" />
-        <option value="$PROJECT_DIR$/src/FitnessWatchList.java" />
-        <option value="$PROJECT_DIR$/src/HeadphoneList.java" />
-        <option value="$PROJECT_DIR$/src/LaptopList.java" />
-        <option value="$PROJECT_DIR$/src/PetTrackerList.java" />
-        <option value="$PROJECT_DIR$/src/SmartWatchList.java" />
-        <option value="$PROJECT_DIR$/src/VirtualRealityList.java" />
         <option value="$PROJECT_DIR$/web/style.css" />
         <option value="$PROJECT_DIR$/web/LeftNavigationBar.html" />
         <option value="$PROJECT_DIR$/src/Phone.java" />
-        <option value="$PROJECT_DIR$/src/AccessoryList.java" />
         <option value="$PROJECT_DIR$/src/NextAccessory.java" />
         <option value="$PROJECT_DIR$/src/PrevAccessory.java" />
         <option value="$PROJECT_DIR$/src/OrderItem.java" />
-        <option value="$PROJECT_DIR$/src/PhoneList.java" />
         <option value="$PROJECT_DIR$/src/Carousel.java" />
         <option value="$PROJECT_DIR$/src/Home.java" />
         <option value="$PROJECT_DIR$/src/RemoveCart.java" />
@@ -319,10 +232,27 @@
         <option value="$PROJECT_DIR$/src/SaxParserDataStore.java" />
         <option value="$PROJECT_DIR$/src/Login.java" />
         <option value="$PROJECT_DIR$/src/SalesmanHome.java" />
-        <option value="$PROJECT_DIR$/src/MySqlDataStoreUtilities.java" />
+        <option value="$PROJECT_DIR$/src/Product.java" />
         <option value="$PROJECT_DIR$/src/Trending.java" />
+        <option value="$PROJECT_DIR$/src/Bestrating.java" />
+        <option value="$PROJECT_DIR$/src/BestRating.java" />
+        <option value="$PROJECT_DIR$/src/AjaxUtility.java" />
+        <option value="$PROJECT_DIR$/src/MySqlDataStoreUtilities.java" />
+        <option value="$PROJECT_DIR$/src/FindReviews.java" />
+        <option value="$PROJECT_DIR$/src/SubmitReview.java" />
         <option value="$PROJECT_DIR$/src/MongoDBDataStoreUtilities.java" />
         <option value="$PROJECT_DIR$/src/Utilities.java" />
+        <option value="$PROJECT_DIR$/src/FitnessWatchList.java" />
+        <option value="$PROJECT_DIR$/src/ViewReview.java" />
+        <option value="$PROJECT_DIR$/src/AccessoryList.java" />
+        <option value="$PROJECT_DIR$/src/HeadphoneList.java" />
+        <option value="$PROJECT_DIR$/src/LaptopList.java" />
+        <option value="$PROJECT_DIR$/src/PetTrackerList.java" />
+        <option value="$PROJECT_DIR$/src/PhoneList.java" />
+        <option value="$PROJECT_DIR$/src/SmartWatchList.java" />
+        <option value="$PROJECT_DIR$/src/VirtualRealityList.java" />
+        <option value="$PROJECT_DIR$/src/VoiceAssistantList.java" />
+        <option value="$PROJECT_DIR$/src/WriteReview.java" />
       </list>
     </option>
   </component>
@@ -349,7 +279,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -388,17 +318,6 @@
             </path>
             <path>
               <item name="CSP584_HW2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSP584_HW2" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CSP584_HW2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSP584_HW2" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CSP584_HW2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -415,7 +334,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538950822670" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538970176527" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -446,7 +365,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7">
+    <configuration name="MongoDBDataStoreUtilities" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MongoDBDataStoreUtilities" />
+      <module name="CSP584_HW2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.90" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -522,6 +448,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 7" />
+      <item itemvalue="Application.MongoDBDataStoreUtilities" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MongoDBDataStoreUtilities" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -575,12 +510,12 @@
       <workItem from="1538269519855" duration="626000" />
       <workItem from="1538860942744" duration="1085000" />
       <workItem from="1538862254118" duration="9454000" />
-      <workItem from="1538946298823" duration="2148000" />
+      <workItem from="1538946298823" duration="10226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212358000" />
+    <option name="totallyTimeSpent" value="220436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -595,7 +530,7 @@
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -605,15 +540,15 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41613588" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32590234" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3280255" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32808024" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.2034384" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3295129" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32908705" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
@@ -634,58 +569,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MySqlDataStoreUtilities.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/VirtualRealityList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VoiceAssistantList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductCatalog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AccessoryList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-752">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -717,24 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HeadphoneList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Home.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LaptopList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-722">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -766,20 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PetTrackerList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhoneList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -805,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-557">
           <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SmartWatchList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-452">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -854,13 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FitnessWatchList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -918,86 +764,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MySqlDataStoreUtilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Mostsold.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Trending.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="69" column="69" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WriteReview.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AjaxUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="43" column="30" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Product.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FindReviews.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FitnessWatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Review.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MongoDBDataStoreUtilities.java">
+    <entry file="file://$PROJECT_DIR$/src/FitnessWatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Trending.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BestRating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3280#3293#0" expanded="true" />
-            <element signature="e#4266#4276#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bestrating.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SubmitReview.java">
+    <entry file="file://$PROJECT_DIR$/src/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="44" column="12" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+        <state relative-caret-position="-20">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AjaxUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-185">
+          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding>
+            <element signature="e#1592#1608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MySqlDataStoreUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="102" column="26" lean-forward="true" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="569" column="5" selection-end-line="808" />
+        <state relative-caret-position="182">
+          <caret line="542" column="172" selection-start-line="542" selection-start-column="167" selection-end-line="542" selection-end-column="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SubmitReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="43" column="152" selection-start-line="43" selection-start-column="140" selection-end-line="43" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ViewReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="76" column="62" lean-forward="true" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MongoDBDataStoreUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
-            <element signature="e#22718#22745#0" expanded="true" />
-            <element signature="e#23282#23290#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2195#2203#0" expanded="true" />
+            <element signature="e#3083#3095#0" expanded="true" />
+            <element signature="e#3280#3293#0" expanded="true" />
+            <element signature="e#4266#4276#0" expanded="true" />
+            <element signature="e#6292#6300#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FindReviews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2818">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AccessoryList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="79" column="79" selection-start-line="79" selection-start-column="79" selection-end-line="79" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HeadphoneList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="67" column="98" selection-start-line="67" selection-start-column="98" selection-end-line="67" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaptopList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="84" column="95" lean-forward="true" selection-start-line="84" selection-start-column="95" selection-end-line="84" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PhoneList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="84" column="94" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PetTrackerList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="65" column="99" selection-start-line="65" selection-start-column="99" selection-end-line="65" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SmartWatchList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="67" column="99" selection-start-line="67" selection-start-column="99" selection-end-line="67" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VirtualRealityList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="64" column="103" selection-start-line="64" selection-start-column="103" selection-end-line="64" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VoiceAssistantList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="66" column="49" lean-forward="true" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FitnessWatchList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="61" column="101" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductCatalog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WriteReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
         </state>
       </provider>
     </entry>

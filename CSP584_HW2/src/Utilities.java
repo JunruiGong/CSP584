@@ -541,8 +541,8 @@ public class Utilities extends HttpServlet {
 
     public String storeReview(String productname, String producttype, String productmaker, String reviewrating, String reviewdate, String reviewtext, String reatilerpin, String price, String city) {
         String message = MongoDBDataStoreUtilities.insertReview(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city);
-        if (!message.equals("Successfull")) {
-            return "UnSuccessfull";
+        if (!message.equals("Successful")) {
+            return "UnSuccessful";
         } else {
             HashMap<String, ArrayList<Review>> reviews = new HashMap<String, ArrayList<Review>>();
             try {
@@ -565,7 +565,7 @@ public class Utilities extends HttpServlet {
 
             // add Reviews into database
 
-            return "Successfull";
+            return "Successful";
         }
     }
 

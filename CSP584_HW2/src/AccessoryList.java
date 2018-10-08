@@ -77,7 +77,7 @@ public class AccessoryList extends HttpServlet {
                         "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
                 pw.print("<li><form method='post' action='WriteReview'>" + "<input type='hidden' name='name' value='" + acc + "'>" +
                         "<input type='hidden' name='type' value='accessories'>" +
-                        "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
+                        "<input type='hidden' name='maker' value='" + accessory.getRetailer() + "'>" +
                         "<input type='hidden' name='access' value='" + phone.getName() + "'>" +
                         "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
                 pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + acc + "'>" +

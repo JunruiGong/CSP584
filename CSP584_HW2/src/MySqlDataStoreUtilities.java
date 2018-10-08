@@ -88,7 +88,7 @@ public class MySqlDataStoreUtilities {
     }
 
 
-    public static boolean insertUser(String username, String password, String repassword, String usertype) {
+    public static boolean insertUser(String username, String password, String rePassword, String userType) {
         try {
 
             getConnection();
@@ -98,8 +98,8 @@ public class MySqlDataStoreUtilities {
             PreparedStatement pst = conn.prepareStatement(insertIntoCustomerRegisterQuery);
             pst.setString(1, username);
             pst.setString(2, password);
-            pst.setString(3, repassword);
-            pst.setString(4, usertype);
+            pst.setString(3, rePassword);
+            pst.setString(4, userType);
             pst.execute();
         } catch (Exception e) {
             System.out.println(e.getMessage());

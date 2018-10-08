@@ -59,8 +59,9 @@ public class FitnessWatchList extends HttpServlet{
                     "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
             pw.print("<li><form method='post' action='WriteReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='fitnessWatch'>" +
-                    "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
+                    "<input type='hidden' name='maker' value='" + fitnessWatch.getRetailer() + "'>" +
                     "<input type='hidden' name='access' value=''>" +
+                    "<input type='hidden' name='price' value='"+fitnessWatch.getPrice()+"'>" +
                     "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
             pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='fitnessWatch'>" +

@@ -60,12 +60,12 @@ public class SmartWatchList extends HttpServlet{
                     "<input type='submit' class='btnbuy' value='Buy Now'></form></li>");
             pw.print("<li><form method='post' action='WriteReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='smartWatch'>" +
-                    "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
+                    "<input type='hidden' name='maker' value='" + smartWatch.getRetailer() + "'>" +
                     "<input type='hidden' name='access' value=''>" +
                     "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
             pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='smartWatch'>" +
-                    "<input type='hidden' name='maker' value='" + CategoryName + "'>" +
+                    "<input type='hidden' name='maker' value='" + smartWatch.getRetailer() + "'>" +
                     "<input type='hidden' name='access' value=''>" +
                     "<input type='submit' value='ViewReview' class='btnreview'></form></li>");
             pw.print("</ul></div></td>");
