@@ -30,8 +30,9 @@ public class WriteReview extends HttpServlet {
             response.setContentType("text/html");
             PrintWriter pw = response.getWriter();
             Utilities utility = new Utilities(request, pw);
+            HttpSession session = request.getSession(true);
+
             if (!utility.isLoggedin()) {
-                HttpSession session = request.getSession(true);
                 session.setAttribute("login_msg", "Please Login to Write a Review");
                 response.sendRedirect("Login");
                 return;
@@ -40,6 +41,7 @@ public class WriteReview extends HttpServlet {
             String producttype = request.getParameter("type");
             String productmaker = request.getParameter("maker");
             String productprice = request.getParameter("price");
+            String username = (String) session.getAttribute("username");
 
             // on filling the form and clicking submit button user will be directed to submit review page
             utility.printHtml("Header.html");
@@ -50,7 +52,7 @@ public class WriteReview extends HttpServlet {
             pw.print("</h2><div class='entry'>");
             pw.print("<table class='gridtable'>");
             pw.print("<tr><td> Product Name: </td><td>");
-            pw.print(productname.replace("_"," "));
+            pw.print(productname.replace("_", " "));
             pw.print("<input type='hidden' name='productname' value='" + productname + "'>");
             pw.print("</td></tr>");
 
@@ -96,6 +98,36 @@ public class WriteReview extends HttpServlet {
             pw.print("<input type='hidden' name='productmaker' value='" + productmaker + "'>");
             pw.print("</td></tr><table>");
 
+            pw.print("<br/>");
+
+            pw.print("<tr>");
+            pw.print("<td> Username: </td>");
+            pw.print("<td>" + username + "</td>");
+            pw.print("</tr>");
+
+
+            pw.print("<tr>");
+            pw.print("<td> User age: </td>");
+            pw.print("<td>");
+            pw.print("<input type='text' name='userAge'> ");
+            pw.print("</td>");
+            pw.print("</tr>");
+
+
+            pw.print("<tr>");
+            pw.print("<td> User gender: </td>");
+            pw.print("<td>");
+            pw.print("<select name='userGender'>");
+            pw.print("<option value='male' selected>Male</option>");
+            pw.print("<option value='female'>Female</option>");
+
+
+            pw.print("<tr>");
+            pw.print("<td> User Occupation: </td>");
+            pw.print("<td> <input type='text' name='userOccupation'></td>");
+            pw.print("</tr>");
+
+
             pw.print("<table><tr></tr><tr></tr><tr><td> Review Rating: </td>");
             pw.print("<td>");
             pw.print("<select name='reviewrating'>");
@@ -115,6 +147,8 @@ public class WriteReview extends HttpServlet {
             pw.print("<td> Review Text: </td>");
             pw.print("<td><textarea name='reviewtext' rows='4' cols='50'> </textarea></td></tr>");
             pw.print("<tr><td colspan='2'><input type='submit' class='btnbuy' name='SubmitReview' value='SubmitReview'></td></tr></table>");
+//            pw.print("</td>");
+//            pw.print("</tr>");
 
             pw.print("</h2></div></div></div>");
             utility.printHtml("Footer.html");

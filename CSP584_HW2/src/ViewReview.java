@@ -49,6 +49,9 @@ public class ViewReview extends HttpServlet {
             String reviewText = "";
             String price = "";
             String city = "";
+            String userAge = "";
+            String userGender = "";
+            String userOccupation = "";
 
             utility.printHtml("Header.html");
             utility.printHtml("LeftNavigationBar.html");
@@ -68,34 +71,64 @@ public class ViewReview extends HttpServlet {
                         pw.print("<table class='gridtable'>");
                         pw.print("<tr>");
                         pw.print("<td> Product Name: </td>");
-                        productName = r.getProductName().replace("_"," ");
+                        productName = r.getProductName().replace("_", " ");
                         pw.print("<td>" + productName + "</td>");
                         pw.print("</tr>");
+
+
                         pw.print("<tr>");
                         pw.print("<td> userName: </td>");
                         userName = r.getUserName();
                         pw.print("<td>" + userName + "</td>");
                         pw.print("</tr>");
+
+                        pw.print("<tr>");
+                        pw.print("<td> userAge: </td>");
+                        userAge = r.getUserAge();
+                        pw.print("<td>" + userAge + "</td>");
+                        pw.print("</tr>");
+
+                        pw.print("<tr>");
+                        pw.print("<td> userGender: </td>");
+                        userGender = r.getUserGender();
+                        pw.print("<td>" + userGender + "</td>");
+                        pw.print("</tr>");
+
+                        pw.print("<tr>");
+                        pw.print("<td> userOccupation: </td>");
+                        userOccupation = r.getUserOccupation();
+                        pw.print("<td>" + userOccupation + "</td>");
+                        pw.print("</tr>");
+
+
                         pw.print("<tr>");
                         pw.print("<td> price: </td>");
                         price = r.getPrice();
                         pw.print("<td>" + price + "</td>");
                         pw.print("</tr>");
+
+
                         pw.print("<tr>");
                         pw.print("<td> Retailer City: </td>");
                         city = r.getRetailerCity();
                         pw.print("<td>" + city + "</td>");
                         pw.print("</tr>");
+
+
                         pw.println("<tr>");
                         pw.println("<td> Review Rating: </td>");
                         reviewRating = r.getReviewRating().toString();
                         pw.print("<td>" + reviewRating + "</td>");
                         pw.print("</tr>");
+
+
                         pw.print("<tr>");
                         pw.print("<td> Review Date: </td>");
                         reviewDate = r.getReviewDate().toString();
                         pw.print("<td>" + reviewDate + "</td>");
                         pw.print("</tr>");
+
+
                         pw.print("<tr>");
                         pw.print("<td> Review Text: </td>");
                         reviewText = r.getReviewText();

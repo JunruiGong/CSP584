@@ -60,6 +60,7 @@ public class PetTrackerList extends HttpServlet{
                     "<input type='hidden' name='type' value='petTracker'>" +
                     "<input type='hidden' name='maker' value='" + petTracker.getRetailer() + "'>" +
                     "<input type='hidden' name='access' value=''>" +
+                    "<input type='hidden' name='price' value='"+petTracker.getPrice()+"'>" +
                     "<input type='submit' value='WriteReview' class='btnreview'></form></li>");
             pw.print("<li><form method='post' action='ViewReview'>" + "<input type='hidden' name='name' value='" + entry.getKey() + "'>" +
                     "<input type='hidden' name='type' value='petTracker'>" +

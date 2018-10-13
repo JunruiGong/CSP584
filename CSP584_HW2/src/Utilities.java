@@ -539,8 +539,9 @@ public class Utilities extends HttpServlet {
         }
     }
 
-    public String storeReview(String productname, String producttype, String productmaker, String reviewrating, String reviewdate, String reviewtext, String reatilerpin, String price, String city) {
-        String message = MongoDBDataStoreUtilities.insertReview(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city);
+    public String storeReview(String productname, String producttype, String productmaker, String reviewrating,
+                              String reviewdate, String reviewtext, String reatilerpin, String price, String city, String userAge, String userGender, String userOccupation) {
+        String message = MongoDBDataStoreUtilities.insertReview(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city, userAge, userGender, userOccupation);
         if (!message.equals("Successful")) {
             return "UnSuccessful";
         } else {
@@ -560,7 +561,7 @@ public class Utilities extends HttpServlet {
                 reviews.put(productname, arr);
             }
             ArrayList<Review> listReview = reviews.get(productname);
-            Review review = new Review(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city);
+            Review review = new Review(productname, username(), producttype, productmaker, reviewrating, reviewdate, reviewtext, reatilerpin, price, city, userAge, userGender, userOccupation);
             listReview.add(review);
 
             // add Reviews into database
@@ -716,8 +717,7 @@ public class Utilities extends HttpServlet {
 
     // store the payment details for orders
     public void storePayment(int orderId,
-                             String orderName, double orderPrice, String userAddress, String creditCardNo) {
-
+                             String orderName, double orderPrice, String userAddress, String creditCardNo, String customer) {
         String username = (String) session.getAttribute("username");
 
         MySqlDataStoreUtilities.insertOrder(orderId, username, orderName, orderPrice, userAddress, creditCardNo);

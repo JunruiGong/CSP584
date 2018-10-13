@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Random;
 
 @WebServlet("/Payment")
@@ -20,11 +21,11 @@ public class Payment extends HttpServlet {
 
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
-
-
+        String msg = "good";
+        String Customername = "";
+        HttpSession session = request.getSession(true);
         Utilities utility = new Utilities(request, pw);
         if (!utility.isLoggedin()) {
-            HttpSession session = request.getSession(true);
             session.setAttribute("login_msg", "Please Login to Pay");
             response.sendRedirect("Login");
             return;
@@ -33,6 +34,28 @@ public class Payment extends HttpServlet {
 
         String userAddress = request.getParameter("userAddress");
         String creditCardNo = request.getParameter("creditCardNo");
+
+//        if (session.getAttribute("usertype").equals("retailer")) {
+//            Customername = request.getParameter("customername");
+//            try {
+//                HashMap<String, User> hm = new HashMap<String, User>();
+//                hm = MySqlDataStoreUtilities.selectUser();
+//                if (hm.containsKey(Customername)) {
+//                    if (hm.get(Customername).getUsertype().equals("customer")) {
+//                        msg = "good";
+//                    } else {
+//                        msg = "bad";
+//                    }
+//
+//                } else {
+//                    msg = "bad";
+//                }
+//
+//            } catch (Exception e) {
+//
+//            }
+//        }
+
         if (!userAddress.isEmpty() && !creditCardNo.isEmpty()) {
             SimpleDateFormat df = new SimpleDateFormat("HHmmss");//设置日期格式
             int orderId = Integer.parseInt(df.format(new Date()));  //设置订单号为当前下单时间的时分秒
@@ -40,7 +63,7 @@ public class Payment extends HttpServlet {
             for (OrderItem oi : utility.getCustomerOrders()) {
 
                 //set the parameter for each column and execute the prepared statement
-                utility.storePayment(orderId, oi.getName(), oi.getPrice(), userAddress, creditCardNo);
+                utility.storePayment(orderId, oi.getName(), oi.getPrice(), userAddress, creditCardNo, Customername);
             }
 
             //remove the order details from cart after processing
