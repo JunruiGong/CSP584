@@ -173,11 +173,8 @@ public class SalesmanHome extends HttpServlet {
 
         //显示order的详细信息
         HashMap<Integer, ArrayList<OrderPayment>> orderPayments = new HashMap<Integer, ArrayList<OrderPayment>>();
-        String TOMCAT_HOME = System.getProperty("catalina.home");
         try {
-            FileInputStream fileInputStream = new FileInputStream(new File(TOMCAT_HOME + "/webapps/CSP584HW1/PaymentDetails.txt"));
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            orderPayments = (HashMap) objectInputStream.readObject();
+           orderPayments = MySqlDataStoreUtilities.selectOrder();
         } catch (Exception ignored) {
 
         }
