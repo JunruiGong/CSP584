@@ -34,6 +34,16 @@ public class Phone extends HttpServlet {
         this.accessories=new HashMap<String,String>();
     }
 
+    public Phone(String name, double price, String image, String retailer, String condition, double discount) {
+        this.name = name;
+        this.price = price;
+        this.image = image;
+        this.condition = condition;
+        this.discount = discount;
+        this.retailer = retailer;
+        this.accessories=new HashMap<String,String>();
+    }
+
     HashMap<String,String> getAccessories() {
         return accessories;
     }

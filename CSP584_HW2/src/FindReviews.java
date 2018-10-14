@@ -33,7 +33,7 @@ public class FindReviews extends HttpServlet {
 
         String productName = request.getParameter("productName");
         int productPrice = Integer.parseInt(request.getParameter("productPrice"));
-        //           String productPrice = request.getParameter("productPrice");
+        //String productPrice = request.getParameter("productPrice");
         int reviewRating = Integer.parseInt(request.getParameter("reviewRating"));
         String compareRating = request.getParameter("compareRating");
         String comparePrice = request.getParameter("comparePrice");
@@ -92,7 +92,7 @@ public class FindReviews extends HttpServlet {
         }
 
 
-        if (filters != null && groupBy != true) {
+        if (filters != null && !groupBy) {
             for (int i = 0; i < filters.length; i++) {
                 //Check what all filters are ON
                 //Build the query accordingly
@@ -106,12 +106,16 @@ public class FindReviews extends HttpServlet {
 
                     case "productPrice":
                         filterByPrice = true;
-                        if (comparePrice.equals("EQUALS_TO")) {
-                            query.put("price", productPrice);
-                        } else if (comparePrice.equals("GREATER_THAN")) {
-                            query.put("price", new BasicDBObject("$gt", productPrice));
-                        } else if (comparePrice.equals("LESS_THAN")) {
-                            query.put("price", new BasicDBObject("$lt", productPrice));
+                        switch (comparePrice) {
+                            case "EQUALS_TO":
+                                query.put("price", productPrice);
+                                break;
+                            case "GREATER_THAN":
+                                query.put("price", new BasicDBObject("$gt", productPrice));
+                                break;
+                            case "LESS_THAN":
+                                query.put("price", new BasicDBObject("$lt", productPrice));
+                                break;
                         }
 
                         break;
@@ -151,7 +155,7 @@ public class FindReviews extends HttpServlet {
 
 
         //Run the query
-        if (groupBy == true) {
+        if (groupBy) {
             //Run the query using aggregate function
 
             if (groupByCity) {
@@ -218,7 +222,6 @@ public class FindReviews extends HttpServlet {
 
             }
         } else {
-
             dbCursor = myReviews.find(query);
         }
 
@@ -227,22 +230,22 @@ public class FindReviews extends HttpServlet {
         pw.print("<div id='content'><div class='post'><h2 class='title meta'>");
         pw.print("<a style='font-size: 24px;'>Data Analytics on Review</a>");
         pw.print("</h2><div class='entry'>");
-        if (groupBy == true) {
+        if (groupBy) {
 
             pw.print("<table class='gridtable'>");
             constructGroupByContent(aggregate, pw, dataGroupBy);
 
             pw.print("</table>");
 
-        } else if (groupBy != true) {
+        } else if (!groupBy) {
             constructTableContent(dbCursor, pw);
         }
         pw.print("</div></div></div>");
         utility.printHtml("Footer.html");
     }
 
-    public void constructGroupByContent(AggregationOutput aggregate, PrintWriter pw, String dataGroupBy) {
-        String tableData = "";
+    private void constructGroupByContent(AggregationOutput aggregate, PrintWriter pw, String dataGroupBy) {
+        String tableData;
         int count = 0;
         if (dataGroupBy.equals("Count")) {
 
@@ -294,17 +297,16 @@ public class FindReviews extends HttpServlet {
             tableData = "<h2>No Data Found</h2>";
             pw.print(tableData);
         }
-
     }
 
-    public void constructTableContent(DBCursor dbCursor, PrintWriter pw) {
+    private void constructTableContent(DBCursor dbCursor, PrintWriter pw) {
         String tableData = "";
         pw.print("<table class='gridtable'>");
 
         while (dbCursor.hasNext()) {
             BasicDBObject bobj = (BasicDBObject) dbCursor.next();
 
-            tableData = "<tr><td align='center' colspan='2'>Review</td></tr><tr><td>Name: </td><td>" + bobj.getString("productName") + "</td></tr>"
+            tableData = "<tr><td align='center' colspan='2'>Review</td></tr><tr><td>Name: </td><td>" + bobj.getString("productName").replace("_"," ") + "</td></tr>"
                     + "<tr><td>Rating:</td><td>" + bobj.getString("reviewRating") + "</td></tr>"
                     + "<tr><td>Price:</td><td>" + bobj.getString("price") + "</td></tr>"
                     + "<tr><td>Retailer City:</td><td>" + bobj.getString("retailercity") + "</td></tr>"
@@ -322,7 +324,5 @@ public class FindReviews extends HttpServlet {
             tableData = "<h2>No Data Found</h2>";
             pw.print(tableData);
         }
-
     }
-
 }

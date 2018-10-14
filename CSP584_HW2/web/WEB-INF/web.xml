@@ -19,8 +19,8 @@
     </servlet>
 
     <!--<servlet-mapping>-->
-        <!--<servlet-name>Startup</servlet-name>-->
-        <!--<url-pattern>Startup</url-pattern>-->
+    <!--<servlet-name>Startup</servlet-name>-->
+    <!--<url-pattern>Startup</url-pattern>-->
     <!--</servlet-mapping>-->
 
     <servlet>
@@ -316,4 +316,78 @@
         <servlet-name>VoiceAssistantList</servlet-name>
         <url-pattern>/VoiceAssistantList</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DataAnalytics</servlet-name>
+        <servlet-class>DataAnalytics</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DataAnalytics</servlet-name>
+        <url-pattern>/DataAnalytics</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DataVisualization</servlet-name>
+        <servlet-class>DataVisualization</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DataVisualization</servlet-name>
+        <url-pattern>/DataVisualization</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FindReviews</servlet-name>
+        <servlet-class>FindReviews</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FindReviews</servlet-name>
+        <url-pattern>/FindReviews</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SubmitReview</servlet-name>
+        <servlet-class>SubmitReview</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SubmitReview</servlet-name>
+        <url-pattern>/SubmitReview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Trending</servlet-name>
+        <servlet-class>Trending</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Trending</servlet-name>
+        <url-pattern>/Trending</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewReview</servlet-name>
+        <servlet-class>ViewReview</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewReview</servlet-name>
+        <url-pattern>/ViewReview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WriteReview</servlet-name>
+        <servlet-class>WriteReview</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WriteReview</servlet-name>
+        <url-pattern>/WriteReview</url-pattern>
+    </servlet-mapping>
+
 </web-app>

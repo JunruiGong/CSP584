@@ -23,6 +23,16 @@ public class PetTracker {
         this.retailer = retailer;
     }
 
+    public PetTracker( String name, double price, String image, String retailer, String condition, double discount) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.image = image;
+        this.condition = condition;
+        this.discount = discount;
+        this.retailer = retailer;
+    }
+
     public PetTracker() {
 
     }

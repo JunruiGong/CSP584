@@ -74,8 +74,7 @@ public class WriteReview extends HttpServlet {
             pw.print("</td></tr>");
 
             pw.print("<tr><td> Retailer Zip:</td><td>");
-            pw.print("60616");
-            pw.print("<input type='hidden' name='retailerZip' value='60616'>");
+            pw.print("<input type='text' name='retailerZip' value=''>");
             pw.print("</td></tr>");
 
             pw.print("<tr><td> Retailer City:</td><td>");

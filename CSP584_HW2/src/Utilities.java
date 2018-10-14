@@ -76,6 +76,8 @@ public class Utilities extends HttpServlet {
                     case "StoreManager":
                         result = result + "<li><a href='StoreManagerHome'><span class='glyphicon'>ViewProduct</span></a></li>"
                                 + "<li><a><span class='glyphicon'>Hello, " + username + "</span></a></li>"
+                                +"<li><a href='DataVisualization'><span class='glyphicon'>Trending</span></a></li>"
+                                +"<li><a href='DataAnalytics'><span class='glyphicon'>DataAnalytics</span></a></li>"
                                 + "<li><a href='Logout'><span class='glyphicon'>Logout</span></a></li>";
                         break;
                     case "Salesman":

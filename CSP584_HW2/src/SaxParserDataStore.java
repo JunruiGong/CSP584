@@ -224,6 +224,7 @@ public class SaxParserDataStore extends DefaultHandler {
 
         if (element.equals("accessory") && currentElement.equals("accessory")) {
             accessories.put(accessory.getId(), accessory);
+            System.out.println("id: " + accessory.getId());
             return;
         }
         if (element.equals("accessory") && currentElement.equals("phone")) {
