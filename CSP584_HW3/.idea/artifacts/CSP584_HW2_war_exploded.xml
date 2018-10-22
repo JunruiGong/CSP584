@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CSP584_HW2:war exploded">
+    <output-path>$USER_HOME$/Documents/apache-tomcat-7.0.90/webapps/CSP584HW2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CSP584_HW3" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="dom4j-1.6" />
+          <element id="library" level="project" name="crimson" />
+          <element id="library" level="project" name="Jar" />
+          <element id="library" level="project" name="mongo-java-driver-3.2.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="CSP584_HW3/web/Web" />
+    </root>
+  </artifact>
+</component>
