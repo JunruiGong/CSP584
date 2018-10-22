@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.*;
+import java.util.Date;
 
 
 /* 
@@ -18,6 +19,8 @@ public class OrderPayment implements Serializable {
     private String userAddress;
     private String creditCardNo;
     private int saleAmount;
+    private Date orderTime;
+
 
     public OrderPayment(int orderId, String userName, String orderName, double orderPrice, String userAddress, String creditCardNo) {
         this.orderId = orderId;
@@ -45,6 +48,19 @@ public class OrderPayment implements Serializable {
         this.orderName = orderName;
         this.orderPrice = orderPrice;
         this.saleAmount = saleAmount;
+    }
+
+    public OrderPayment(int saleAmount, Date orderTime) {
+        this.saleAmount = saleAmount;
+        this.orderTime = orderTime;
+    }
+
+    public Date getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(Date orderTime) {
+        this.orderTime = orderTime;
     }
 
     public int getSaleAmount() {

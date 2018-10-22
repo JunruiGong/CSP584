@@ -1,5 +1,7 @@
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.Date;
 
 public class MySqlDataStoreUtilities {
     static Connection conn = null;
@@ -33,11 +35,14 @@ public class MySqlDataStoreUtilities {
     public static void insertOrder(int orderId, String userName, String orderName, double orderPrice, String userAddress, String creditCardNo) {
         try {
 
-            getConnection();
-//            String insertIntoCustomerOrderQuery = "INSERT INTO orders (orderId,userName,orderName,orderPrice,userAddress,creditCardNo) " +
-//                    "VALUES (?,?,?,?,?,?);";
+            //生成日期对象
+            Date current_date = new Date();
+            //设置日期格式化样式为：yyyy-MM-dd
+            SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-            String insertIntoCustomerOrderQuery = "insert into orders (orderID, userName, orderName, orderPrice, userAddress, creditCardNo) VALUES (?,?,?,?,?,?);";
+            getConnection();
+
+            String insertIntoCustomerOrderQuery = "insert into orders (orderID, userName, orderName, orderPrice, userAddress, creditCardNo, orderTime) VALUES (?,?,?,?,?,?,?);";
 
             PreparedStatement pst = conn.prepareStatement(insertIntoCustomerOrderQuery);
             //set the parameter for each column and execute the prepared statement
@@ -47,6 +52,7 @@ public class MySqlDataStoreUtilities {
             pst.setDouble(4, orderPrice);
             pst.setString(5, userAddress);
             pst.setString(6, creditCardNo);
+            pst.setString(7, SimpleDateFormat.format(current_date.getTime()));
             pst.execute();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -85,6 +91,27 @@ public class MySqlDataStoreUtilities {
 
         }
         return orderPayments;
+    }
+
+    public static HashMap<String, OrderPayment> selectDailyTransaction() {
+        HashMap<String, OrderPayment> hm = new HashMap<String, OrderPayment>();
+        try {
+            getConnection();
+
+            String selectAcc = "SELECT count(orderTime) as soldAmount, orderTime from orders group by orderTime";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            int i = 0;
+            while (rs.next()) {
+                OrderPayment orderPayment = new OrderPayment(rs.getInt("soldAmount"), rs.getDate("orderTime"));
+                i++;
+                hm.put(String.valueOf(i), orderPayment);
+                //orderPayment.setId(rs.getString("Id"));
+            }
+        } catch (Exception e) {
+        }
+        return hm;
     }
 
 
@@ -676,7 +703,6 @@ public class MySqlDataStoreUtilities {
             getConnection();
 
             String selectAcc = "select DISTINCT(temp.orderName),temp.saleAmount,orders.orderPrice from orders, (select orderName, count(orderName) as saleAmount from orders group by orderName) as temp where orders.orderName = temp.orderName";
-            System.out.println(selectAcc);
             PreparedStatement pst = conn.prepareStatement(selectAcc);
             ResultSet rs = pst.executeQuery();
 

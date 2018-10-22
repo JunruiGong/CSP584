@@ -34,7 +34,7 @@ public class SalesReport extends HttpServlet {
         }
     }
 
-    protected void displaySalesReport(HttpServletRequest request,
+    private void displaySalesReport(HttpServletRequest request,
                                       HttpServletResponse response, PrintWriter pw)
             throws ServletException, IOException {
 
@@ -120,26 +120,25 @@ public class SalesReport extends HttpServlet {
 
         pw.print("<table class='gridtable'>");
         pw.print("<tr>");
-        pw.print("<td>Product Name</td>");
-        pw.print("<td>Price</td>");
-        pw.print("<td>Inventory</td>");
+        pw.print("<td>Date</td>");
+        pw.print("<td>Sold Amount</td>");
         pw.print("</tr>");
-//        for (Map.Entry<Integer, ArrayList<OrderPayment>> entry : orderPayments.entrySet()) {
-//            for (OrderPayment od : entry.getValue()) {
-//
-//
-//                pw.print("<form method='post' action='RemoveUpdateOrder'>");
-//                pw.print("<tr>");
-//                pw.print("<td>" + od.getOrderId() + "</td>" +
-//                        "<td>" + od.getUserName() + "</td>" +
-//                        "<td>" + od.getOrderName() + "</td>" +
-//                        "<td>" + od.getOrderPrice() + "</td>" +
-//                        "<td>" + od.getUserAddress() + "</td>" +
-//                        "<td>" + od.getCreditCardNo() + "</td>");
-//                pw.print("</tr>");
-//                pw.print("</form>");
-//            }
-//        }
+
+        try {
+            orderPaymentHashMap = MySqlDataStoreUtilities.selectDailyTransaction();
+        } catch (Exception ignored) {
+
+        }
+
+        for (OrderPayment orderPayment : orderPaymentHashMap.values()) {
+
+            String orderTime = orderPayment.getOrderTime().toString().substring(0,10);
+            pw.print("<tr>");
+            pw.print("<td>" + orderTime + "</td>" +
+                    "<td>" + orderPayment.getSaleAmount() + "</td>");
+            pw.print("</tr>");
+
+        }
         pw.print("</table></div></div>");
     }
 }

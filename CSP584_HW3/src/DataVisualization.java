@@ -34,7 +34,7 @@ public class DataVisualization extends HttpServlet {
         displayPage(request, response, pw);
     }
 
-    protected void displayPage(HttpServletRequest request, HttpServletResponse response, PrintWriter pw)
+    private void displayPage(HttpServletRequest request, HttpServletResponse response, PrintWriter pw)
             throws ServletException, IOException {
 
         Utilities utility = new Utilities(request, pw);
