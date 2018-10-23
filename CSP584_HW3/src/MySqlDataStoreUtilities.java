@@ -114,6 +114,24 @@ public class MySqlDataStoreUtilities {
         return hm;
     }
 
+    public static ArrayList<OrderPayment> selectDailyTransactionForChart() {
+        ArrayList<OrderPayment> orderPaymentArrayList = new ArrayList<OrderPayment>();
+        try {
+            getConnection();
+
+            String selectAcc = "SELECT count(orderTime) as soldAmount, orderTime from orders group by orderTime";
+            PreparedStatement pst = conn.prepareStatement(selectAcc);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                OrderPayment orderPayment = new OrderPayment(rs.getInt("soldAmount"), rs.getDate("orderTime"));
+                orderPaymentArrayList.add(orderPayment);
+            }
+        } catch (Exception e) {
+        }
+        return orderPaymentArrayList;
+    }
+
 
     public static boolean insertUser(String username, String password, String rePassword, String userType) {
         try {

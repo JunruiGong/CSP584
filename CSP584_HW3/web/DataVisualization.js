@@ -6,7 +6,7 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 $("#btnGetChartData").click(function () {
      $("#btnGetChartData").hide();
     $.ajax({
-        url: "DataVisualization",
+        url: "SalesReport",
         type: "POST",
         data: "{}",
         success: function (msg) {

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="CSP584_HW2:war exploded">
-    <output-path>$USER_HOME$/Documents/apache-tomcat-7.0.90/webapps/CSP584HW2</output-path>
+  <artifact type="exploded-war" name="CSP584_HW3:war exploded">
+    <output-path>$USER_HOME$/Documents/apache-tomcat-7.0.90/webapps/CSP584HW3</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
