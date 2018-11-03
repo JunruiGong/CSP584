@@ -60,7 +60,7 @@ public class StoreManagerHome extends HttpServlet {
                 }
             }
 
-            if (utility.storeNewProduct(map)) {
+            if (utility.storeNewProduct(map) && AjaxUtility.storeData(map)) {
                 //添加成功
                 error_msg = "Completed!";
                 displayStoreManagerHome(request, response, pw, "newProduct");

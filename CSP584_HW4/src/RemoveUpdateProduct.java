@@ -29,7 +29,7 @@ public class RemoveUpdateProduct extends HttpServlet {
 
         if (request.getParameter("Product") != null && request.getParameter("Product").equals("Remove")) {
             //Remove Product
-            if (utility.removeProduct(productId, catalog)) {
+            if (utility.removeProduct(productId, catalog) && AjaxUtility.deleteProduct(productId)) {
                 response.sendRedirect("StoreManagerHome");
             }
 

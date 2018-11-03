@@ -77,7 +77,7 @@ public class MySqlDataStoreUtilities {
                     orderPayments.put(rs.getInt("orderId"), arr);
                 }
                 ArrayList<OrderPayment> listOrderPayment = orderPayments.get(rs.getInt("OrderId"));
-                System.out.println("data is" + rs.getInt("OrderId") + orderPayments.get(rs.getInt("OrderId")));
+//                System.out.println("data is" + rs.getInt("OrderId") + orderPayments.get(rs.getInt("OrderId")));
 
                 //add to orderpayment hashmap
                 OrderPayment order = new OrderPayment(rs.getInt("OrderId"), rs.getString("userName"), rs.getString("orderName"), rs.getDouble("orderPrice"), rs.getString("userAddress"), rs.getString("creditCardNo"));
@@ -316,8 +316,6 @@ public class MySqlDataStoreUtilities {
                 pst.setDouble(8, smartWatch.getDiscount());
 
                 pst.executeUpdate();
-
-
             }
 
             for (Map.Entry<String, VirtualReality> entry : SaxParserDataStore.virtualRealityHashMap.entrySet()) {
