@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ProductCatalog>
+
+    <FitnessWatchCatalog>
+
+        <fitnessWatch id="Fitness_Tracker_HR">
+            <name>Fitness Tracker HR</name>
+            <price>29.99</price>
+            <image>Fitness_Tracker_HR.png</image>
+            <manufacturer>LETSCOM</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </fitnessWatch>
+
+        <fitnessWatch id="Letsfit_Fitness_Tracker">
+            <name>Letsfit Fitness Tracker</name>
+            <price>29.99</price>
+            <image>Letsfit_fitness_tracker.png</image>
+            <manufacturer>Letsfit</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </fitnessWatch>
+
+        <fitnessWatch id="Fitbit_Fitness_Watch">
+            <name>Fitbit Blaze Smart Fitness Watch</name>
+            <price>172.99</price>
+            <image>Fitbit_Fitness_Watch.png</image>
+            <manufacturer>Fitbit</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </fitnessWatch>
+
+        <fitnessWatch id="Fitbit_Charge_2">
+            <name>Fitbit Charge 2</name>
+            <price>129.99</price>
+            <image>Fitbit_Charge_2.png</image>
+            <manufacturer>Fitbit</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+
+        </fitnessWatch>
+
+        <fitnessWatch id="Garmin_vivoactive_Smart_Watch">
+            <name>Garmin vivoactive HR GPS Smart Watch</name>
+            <price>175.99</price>
+            <image>Garmin_vivoactive_Smart_Watch.png</image>
+            <manufacturer>Garmin_vivoactive</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+
+        </fitnessWatch>
+
+        <fitnessWatch id="KEEPONFIT_Fitness_Tracker">
+            <name>KEEPONFIT Fitness Tracker</name>
+            <price>25.99</price>
+            <image>KEEPONFIT_Fitness_Tracker.png</image>
+            <manufacturer>KEEPONFIT</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </fitnessWatch>
+
+        <fitnessWatch id="wesoo_Fitness_Tracker">
+            <name>wesoo Fitness Tracker</name>
+            <price>27.99</price>
+            <image>wesoo_Fitness_Tracker.png</image>
+            <manufacturer>wesoo</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </fitnessWatch>
+
+        <fitnessWatch id="Akuti_Fitness_Tracker_HR">
+            <name>Akuti Fitness Tracker HR</name>
+            <price>29.99</price>
+            <image>Akuti_Fitness_Tracker_HR.png</image>
+            <manufacturer>Akuti</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+
+        </fitnessWatch>
+
+        <fitnessWatch id="Coffea_Fitness_Tracker">
+            <name>Coffea Fitness Tracker</name>
+            <price>39.99</price>
+            <image>Coffea_Fitness_Tracker.png</image>
+            <manufacturer>Coffea</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+
+        </fitnessWatch>
+
+        <fitnessWatch id="Garmin_vivoactive_Black">
+            <name>Garmin vivoactive Black</name>
+            <price>179.99</price>
+            <image>Garmin_vivoactive_Black.png</image>
+            <manufacturer>Garmin vivoactive</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </fitnessWatch>
+    </FitnessWatchCatalog>
+
+    <SmartWatchCatalog>
+        <smartWatch id="Amazfit_Bip_Smartwatch">
+            <name>Amazfit Bip Smartwatch</name>
+            <price>79.99</price>
+            <image>Amazfit_Bip_Smartwatch.png</image>
+            <manufacturer>Amazfit</manufacturer>
+            <condition>New</condition>
+            <discount>5.0</discount>
+        </smartWatch>
+
+        <smartWatch id="Garmin_fenix_5_Plus">
+            <name>Garmin fenix 5 Plus</name>
+            <price>844.99</price>
+            <image>Garmin_fenix_5_Plus.png</image>
+            <manufacturer>Garmin fenix</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </smartWatch>
+
+        <smartWatch id="Ticwatch_E_most_comfortable_Smartwatch">
+            <name>Ticwatch E most comfortable Smartwatch</name>
+            <price>129.99</price>
+            <image>Ticwatch_E_most_comfortable_Smartwatch.png</image>
+            <manufacturer>Ticwatch</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </smartWatch>
+
+        <smartWatch id="Samsung_Gear_S3_Frontier_Smartwatch ">
+            <name>Samsung Gear S3 Frontier Smartwatch</name>
+            <price>288.99</price>
+            <image>Samsung_Gear_S3_Frontier_Smartwatch.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </smartWatch>
+
+        <smartWatch id="Samsung_Gear_S2_Smartwatch">
+            <name>Samsung Gear S2 Smartwatch</name>
+            <price>189.99</price>
+            <image>Samsung_Gear_S2_Smartwatch.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </smartWatch>
+
+        <smartWatch id="Fitbit_Blaze_Smart_Fitness_Watch">
+            <name>Fitbit Blaze Smart Fitness Watch</name>
+            <price>172.99</price>
+            <image>Fitbit_Blaze_Smart_Fitness_Watch.png</image>
+            <manufacturer>Fitbit</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </smartWatch>
+
+        <smartWatch id="Aeifond_Smart">
+            <name>Aeifond Smart</name>
+            <price>23.99</price>
+            <image>Aeifond_Smart.png</image>
+            <manufacturer>Aeifond</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </smartWatch>
+
+        <smartWatch id="Garmin_vivoactive_3">
+            <name>Garmin vivoactive 3</name>
+            <price>238.99</price>
+            <image>Garmin_vivoactive_3.png</image>
+            <manufacturer>Garmin</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </smartWatch>
+
+        <smartWatch id="WJPILIS_Smart_Watch">
+            <name>WJPILIS Watch</name>
+            <price>22.99</price>
+            <image>WJPILIS_Smart_Watch.png</image>
+            <manufacturer>WJPILIS</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </smartWatch>
+
+        <smartWatch id="TicWatch_Smart_Watch">
+            <name>TicWatch Smart Watch</name>
+            <price>249.99</price>
+            <image>TicWatch_Smart_Watch.png</image>
+            <manufacturer>TicWatch</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </smartWatch>
+
+
+    </SmartWatchCatalog>
+
+    <HeadPhoneCatalog>
+        <headphone id="Mighty_Rock_E7">
+            <name>Mighty Rock E7</name>
+            <price>65.99</price>
+            <image>Mighty_Rock_E7.png</image>
+            <manufacturer>Mighty Rock</manufacturer>
+            <condition>New</condition>
+            <discount>5.0</discount>
+        </headphone>
+
+        <headphone id="AILIHEN_I60">
+            <name>AILIHEN I60</name>
+            <price>19.99</price>
+            <image>AILIHEN_I60.png</image>
+            <manufacturer>AILIHEN</manufacturer>
+            <condition>New</condition>
+            <discount>1.0</discount>
+        </headphone>
+
+        <headphone id="Mpow_059_Bluetooth_Headphones">
+            <name>Mpow 059 Bluetooth Headphones</name>
+            <price>34.99</price>
+            <image>Mpow_059_Bluetooth_Headphones.png</image>
+            <manufacturer>ElectronicArts</manufacturer>
+            <condition>New</condition>
+            <discount>5.0</discount>
+        </headphone>
+
+        <headphone id="Panasonic_ErgoFit_Headphones">
+            <name>Panasonic ErgoFit Headphones</name>
+            <price>9.99</price>
+            <image>Panasonic_ErgoFit_Headphones.png</image>
+            <manufacturer>Panasonic</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </headphone>
+
+        <headphone id="Bose_QuietComfort_25">
+            <name>Bose QuietComfort 25</name>
+            <price>179.99</price>
+            <image>Bose_QuietComfort_25.png</image>
+            <manufacturer>Bose</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </headphone>
+
+        <headphone id="Otium_Wireless_Earphones">
+            <name>Otium Wireless Earphones</name>
+            <price>19.99</price>
+            <image>Otium_Wireless_Earphones.png</image>
+            <manufacturer>Otium</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </headphone>
+
+        <headphone id="COWIN_E7_Headphones">
+            <name>COWIN E7 Headphones</name>
+            <price>69.99</price>
+            <image>COWIN_E7_Headphones.png</image>
+            <manufacturer>COWIN</manufacturer>
+            <condition>New</condition>
+            <discount>15.0</discount>
+        </headphone>
+
+        <headphone id="AILIHEN_C8_Headphones">
+            <name>AILIHEN C8 Headphones</name>
+            <price>19.99</price>
+            <image>AILIHEN_C8_Headphones.png</image>
+            <manufacturer>AILIHEN</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </headphone>
+
+        <headphone id="Mpow_Flame_Headphones">
+            <name>Mpow Flame Headphones</name>
+            <price>19.99</price>
+            <image>Mpow_Flame_Headphones.png</image>
+            <manufacturer>Mpow</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </headphone>
+
+        <headphone id="Sony_MDR7506_Headphone">
+            <name>Sony MDR7506 Headphone</name>
+            <price>79.99</price>
+            <image>Sony_MDR7506_Headphone.png</image>
+            <manufacturer>Sony</manufacturer>
+            <condition>New</condition>
+            <discount>5.0</discount>
+        </headphone>
+    </HeadPhoneCatalog>
+
+    <VirtualRealityCatalog>
+
+        <virtualReality id="VeeR_Oasis_VR">
+            <name>VeeR Oasis VR</name>
+            <price>37.99</price>
+            <image>VeeR_Oasis_VR.png</image>
+            <manufacturer>VeeR Oasis</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="HTC_VIVE">
+            <name>HTC VIVE</name>
+            <price>499.99</price>
+            <image>HTC_VIVE.png</image>
+            <manufacturer>HTC</manufacturer>
+            <condition>New</condition>
+            <discount>10</discount>
+        </virtualReality>
+
+        <virtualReality id="DESTEK_V4_VR">
+            <name>DESTEK V4 VR</name>
+            <price>37.99</price>
+            <image>DESTEK_V4_VR.png</image>
+            <manufacturer>DESTEK</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="Oculus_Rift_VR">
+            <name>Oculus Rift VR</name>
+            <price>37.99</price>
+            <image>Oculus_Rift_VR.png</image>
+            <manufacturer>Oculus Rift</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="Oculus_VR">
+            <name>Oculus VR</name>
+            <price>37.99</price>
+            <image>Oculus_VR.png</image>
+            <manufacturer>Oculus</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+
+        <virtualReality id="Samsung_Gear_VR">
+            <name>Samsung Gear VR</name>
+            <price>137.99</price>
+            <image>Samsung_Gear_VR.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="CINERA_VR">
+            <name>CINERA VR</name>
+            <price>799.99</price>
+            <image>CINERA_VR.png</image>
+            <manufacturer>CINERA</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="Lenovo_Mirage_Solo_VR">
+            <name>Lenovo Mirage Solo VR</name>
+            <price>399.99</price>
+            <image>Lenovo_Mirage_Solo_VR.png</image>
+            <manufacturer>Lenovo</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="HTC_VIVE_Pro_VR">
+            <name>HTC VIVE Pro VR</name>
+            <price>1399.99</price>
+            <image>HTC_VIVE_Pro_VR.png</image>
+            <manufacturer>HTC</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+
+        <virtualReality id="HAMSWAN_Virtual_Reality">
+            <name>HAMSWAN Virtual Reality</name>
+            <price>37.99</price>
+            <image>HAMSWAN_Virtual_Reality.png</image>
+            <manufacturer>HAMSWAN</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </virtualReality>
+    </VirtualRealityCatalog>
+
+    <PetTrackerCatalog>
+        <petTracker id="Whistle_GPS_Pet_Tracker">
+            <name>Whistle 3 GPS Pet Tracker</name>
+            <price>79.99</price>
+            <image>Whistle_GPS_Pet_Tracker.png</image>
+            <manufacturer>Whistle</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="Link_AKC_Dog_Tracker">
+            <name>Link AKC Smart Dog Tracker</name>
+            <price>99</price>
+            <image>Link_AKC_Dog_Tracker.png</image>
+            <manufacturer>v</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="Tractive_Pet_Tracker">
+            <name>Tractive Pet Tracker</name>
+            <price>64.99</price>
+            <image>Tractive_Pet_Tracker.png</image>
+            <manufacturer>Tractive</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="Findster_Duo_Pet_Tracker">
+            <name>Findster Duo Pet Tracker</name>
+            <price>149.99</price>
+            <image>Findster_Duo_Pet_Tracker.png</image>
+            <manufacturer>Findster</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="Hangang_Pet_Tracker">
+            <name>Hangang Pet Tracker</name>
+            <price>48.99</price>
+            <image>Hangang_Pet_Tracker.png</image>
+            <manufacturer>Hangang</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="GBD_Pet_Tracker">
+            <name>GBD Pet Tracker</name>
+            <price>19.99</price>
+            <image>GBD_Pet_Tracker.png</image>
+            <manufacturer>GBD</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </petTracker>
+
+        <petTracker id="Tile_Pet_Tracker">
+            <name>Tile Pet Tracker</name>
+            <price>44.99</price>
+            <image>Tile_Pet_Tracker.png</image>
+            <manufacturer>Tile</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="MyKi_Pet_tracker">
+            <name>MyKi Pet tracker</name>
+            <price>79.99</price>
+            <image>MyKi_Pet_tracker.png</image>
+            <manufacturer>MyKi</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="UniAux_Tracker">
+            <name>UniAux Tracker</name>
+            <price>46.99</price>
+            <image>UniAux_Tracker.png</image>
+            <manufacturer>UniAux</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+
+        <petTracker id="MACYWELL_Pet_Tracker">
+            <name>MACYWELL Pet Tracker</name>
+            <price>18.99</price>
+            <image>MACYWELL_Pet_Tracker.png</image>
+            <manufacturer>MACYWELL</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+        </petTracker>
+
+        <petTracker id="TabCat_Pet_Tracker">
+            <name>TabCat Pet Tracker</name>
+            <price>99.99</price>
+            <image>TabCat_Pet_Tracker.png</image>
+            <manufacturer>TabCat</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </petTracker>
+    </PetTrackerCatalog>
+
+    <PhoneCatalog>
+        <phone id="LeapFrog_Smart_Phone">
+            <name>LeapFrog Smart Phone</name>
+            <price>14.99</price>
+            <image>LeapFrog_Smart_Phone.png</image>
+            <manufacturer>LeapFrog</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </phone>
+
+        <phone id="Essential_Phone">
+            <name>Essential Phone</name>
+            <price>399</price>
+            <image>Essential_Phone.png</image>
+            <manufacturer>TabEssentialCat</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </phone>
+
+        <phone id="VTech_Phone">
+            <name>VTech Phone</name>
+            <price>14.99</price>
+            <image>VTech_Phone.png</image>
+            <manufacturer>VTech</manufacturer>
+            <condition>New</condition>
+            <discount>0</discount>
+
+        </phone>
+
+        <phone id="Samsung_Galaxy_S8">
+            <name>Samsung Galaxy S8</name>
+            <price>473.99</price>
+            <image>Samsung_Galaxy_S8.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+            <accessories>
+                <accessory>Samsung_DeX_Station</accessory>
+                <accessory>Galaxy_Desktop_Charging_Dock</accessory>
+                <accessory>Spigen_Neo_Hybrid_Galaxy_S8_Case</accessory>
+                <accessory>JSAUX_USB_Type_C_Cable</accessory>
+                <accessory>Galaxy_S8_Screen_Protector</accessory>
+            </accessories>
+        </phone>
+
+        <phone id="Samsung_Galaxy_S9">
+            <name>Samsung Galaxy S9+</name>
+            <price>737.99</price>
+            <image>Samsung_Galaxy_S9.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+            <accessories>
+                <accessory>Samsung_DeX_Station</accessory>
+                <accessory>Galaxy_Desktop_Charging_Dock</accessory>
+                <accessory>Spigen_Neo_Hybrid_Galaxy_S8_Case</accessory>
+                <accessory>JSAUX_USB_Type_C_Cable</accessory>
+                <accessory>Galaxy_S8_Screen_Protector</accessory>
+            </accessories>
+
+        </phone>
+
+        <phone id="Panasonic_KX_TGC352B">
+            <name>Panasonic KX-TGC352B</name>
+            <price>34.99</price>
+            <image>Panasonic_KX_TGC352B.png</image>
+            <manufacturer>Panasonic</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </phone>
+
+        <phone id="Apple_iPhone_6">
+            <name>Apple iPhone 6</name>
+            <price>172</price>
+            <image>Apple_iPhone_6.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+            <accessories>
+                <accessory>Lamicall_Cell_Phone_Stand</accessory>
+                <accessory>AMIR_for_iPhone_Lens</accessory>
+                <accessory>Cell_Phone_Holder_for_Car</accessory>
+                <accessory>Lightning_Audio_Charger_Adapter</accessory>
+                <accessory>WINSTION_iPhone_Stand_Charging_Desk_Station</accessory>
+            </accessories>
+        </phone>
+
+        <phone id="Apple_iPhone_8">
+            <name>Apple iPhone 8</name>
+            <price>565</price>
+            <image>Apple_iPhone_8.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+            <accessories>
+                <accessory>Lamicall_Cell_Phone_Stand</accessory>
+                <accessory>AMIR_for_iPhone_Lens</accessory>
+                <accessory>Cell_Phone_Holder_for_Car</accessory>
+                <accessory>Lightning_Audio_Charger_Adapter</accessory>
+                <accessory>WINSTION_iPhone_Stand_Charging_Desk_Station</accessory>
+            </accessories>
+        </phone>
+
+        <phone id="Honor_7X">
+            <name>Honor 7X</name>
+            <price>199.99</price>
+            <image>Honor_7X.png</image>
+            <manufacturer>Honor</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </phone>
+
+        <phone id="Huawei_Mate_SE">
+            <name>Huawei Mate SE</name>
+            <price>229.99</price>
+            <image>Huawei_Mate_SE.png</image>
+            <manufacturer>Huawei</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </phone>
+
+        <phone id="BLU_Studio_X8">
+            <name>BLU Studio X8</name>
+            <price>49.99</price>
+            <image>BLU_Studio_X8.png</image>
+            <manufacturer>BLU</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </phone>
+
+        <phone id="BLU_Pure_View">
+            <name>BLU Pure View</name>
+            <price>129.99</price>
+            <image>BLU_Pure_View.png</image>
+            <manufacturer>BLU</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </phone>
+    </PhoneCatalog>
+
+    <LaptopCatalog>
+        <laptop id="HP_Chromebook">
+            <name>HP Chromebook</name>
+            <price>249.99</price>
+            <image>HP_Chromebook.png</image>
+            <manufacturer>HP</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </laptop>
+
+        <laptop id="ASUS_Chromebook">
+            <name>ASUS Chromebook</name>
+            <price>223.95</price>
+            <image>ASUS_Chromebook.png</image>
+            <manufacturer>ASUS</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </laptop>
+
+        <laptop id="Apple_MacBook_Air">
+            <name>Apple MacBook Air</name>
+            <price>479.99</price>
+            <image>Apple_MacBook_Air.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </laptop>
+
+        <laptop id="iMac">
+            <name>iMac</name>
+            <price>1250.99</price>
+            <image>Apple_iMac.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </laptop>
+
+        <laptop id="Acer_Predator_Helios_300_Gaming_Laptop">
+            <name>Acer Predator Helios 300 Gaming Laptop</name>
+            <price>1049.99</price>
+            <image>Acer_Predator_Helios_300_Gaming_Laptop.png</image>
+            <manufacturer>Acer</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </laptop>
+
+        <!--<laptop id="Acer_Aspire_E_15">-->
+            <!--<name>Acer Aspire E 15</name>-->
+            <!--<price>599.99</price>-->
+            <!--<image>Acer_Aspire_E_15.png</image>-->
+            <!--<manufacturer>Acer</manufacturer>-->
+            <!--<condition>New</condition>-->
+            <!--<discount>5</discount>-->
+        <!--</laptop>-->
+
+        <laptop id="chromebook">
+            <name>Samsung Chromebook 3</name>
+            <price>188.56</price>
+            <image>Samsung_Chromebook_3.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </laptop>
+
+        <laptop id="ASUS_C302CA_Chromebook">
+            <name>ASUS C302CA-DHM4 Chromebook</name>
+            <price>449</price>
+            <image>ASUS_C302CA_Chromebook.png</image>
+            <manufacturer>ASUS</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </laptop>
+
+        <laptop id="Acer_Aspire">
+            <name>Acer Aspire</name>
+            <price>249.99</price>
+            <image>Acer_Aspire.png</image>
+            <manufacturer>Acer</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </laptop>
+
+        <laptop id="MSI_GV62">
+            <name>MSI GV62</name>
+            <price>799</price>
+            <image>MSI_GV62.png</image>
+            <manufacturer>MSI</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </laptop>
+
+    </LaptopCatalog>
+
+    <VoiceAssistantCatalog>
+        <voiceAssistant id="Echo_Dot">
+            <name>Echo Dot</name>
+            <price>49.99</price>
+            <image>Echo_Dot.png</image>
+            <manufacturer>Amazon</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="Echo_Spot">
+            <name>Echo Spot</name>
+            <price>129.99</price>
+            <image>Echo_Spot.png</image>
+            <manufacturer>Amazon</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="Echo">
+            <name>Echo</name>
+            <price>99.99</price>
+            <image>Echo.png</image>
+            <manufacturer>Amazon</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="eufy_Genie_Speaker">
+            <name>eufy Genie Speaker</name>
+            <price>34.99</price>
+            <image>eufy_Genie_Speaker.png</image>
+            <manufacturer>eufy</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="iHome_iBT62B">
+            <name>iHome iBT62B</name>
+            <price>16.99</price>
+            <image>iHome_iBT62B.png</image>
+            <manufacturer>iHome</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="Google_Home_Mini">
+            <name>Google Home Mini</name>
+            <price>49</price>
+            <image>Google_Home_Mini.png</image>
+            <manufacturer>Google</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="Altec_Lansing_IMW449">
+            <name>Altec Lansing IMW449</name>
+            <price>59.99</price>
+            <image>Altec_Lansing_IMW449.png</image>
+            <manufacturer>Altec</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="Ultimate_Ears_MEGABOOM">
+            <name>Ultimate Ears MEGABOOM</name>
+            <price>189.96</price>
+            <image>Ultimate_Ears_MEGABOOM.png</image>
+            <manufacturer>MEGABOOM</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="JBL_Flip4">
+            <name>JBL Flip 4</name>
+            <price>82.99</price>
+            <image>JBL_Flip4.png</image>
+            <manufacturer>JBL</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="iHome_iBT38G">
+            <name>iHome iBT38G</name>
+            <price>57.48</price>
+            <image>iHome_iBT38G.png</image>
+            <manufacturer>iHome</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+        <voiceAssistant id="Google_Home">
+            <name>Google Home</name>
+            <price>129.00</price>
+            <image>Google_Home.png</image>
+            <manufacturer>Google</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+
+        </voiceAssistant>
+
+    </VoiceAssistantCatalog>
+
+    <AccessoryCatalog>
+
+        <accessory id="Lamicall_Cell_Phone_Stand">
+            <name>Lamicall Cell Phone Stand</name>
+            <price>9.99</price>
+            <image>Lamicall_Cell_Phone_Stand.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="AMIR_for_iPhone_Lens">
+            <name>AMIR for iPhone Lens</name>
+            <price>13.99</price>
+            <image>AMIR_for_iPhone_Lens.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="Cell_Phone_Holder_for_Car">
+            <name>Cell Phone Holder for Car</name>
+            <price>12.98</price>
+            <image>Cell_Phone_Holder_for_Car.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="Lightning_Audio_Charger_Adapter">
+            <name>Lightning Audio Charger Adapter</name>
+            <price>10.58</price>
+            <image>Lightning_Audio_Charger_Adapter.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="WINSTION_iPhone_Stand_Charging_Desk_Station">
+            <name>WINSTION iPhone Stand Charging Desk Station</name>
+            <price>15.99</price>
+            <image>WINSTION_iPhone_Stand_Charging_Desk_Station.png</image>
+            <manufacturer>Apple</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="Samsung_DeX_Station">
+            <name>Samsung DeX Station</name>
+            <price>12</price>
+            <image>Samsung_DeX_Station.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="Galaxy_Desktop_Charging_Dock">
+            <name>Galaxy Desktop Charging Dock</name>
+            <price>19.99</price>
+            <image>Galaxy_Desktop_Charging_Dock.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="Spigen_Neo_Hybrid_Galaxy_S8_Case">
+            <name>Spigen Neo Hybrid Galaxy S8 Case</name>
+            <price>13.99</price>
+            <image>Spigen_Neo_Hybrid_Galaxy_S8_Case.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="JSAUX_USB_Type_C_Cable">
+            <name>JSAUX USB Type C Cable</name>
+            <price>10.99</price>
+            <image>JSAUX_USB_Type_C_Cable.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+        <accessory id="Galaxy_S8_Screen_Protector">
+            <name>Galaxy S8 Screen Protector</name>
+            <price>8.96</price>
+            <image>Galaxy_S8_Screen_Protector.png</image>
+            <manufacturer>Samsung</manufacturer>
+            <condition>New</condition>
+            <discount>5</discount>
+        </accessory>
+
+    </AccessoryCatalog>
+</ProductCatalog>
